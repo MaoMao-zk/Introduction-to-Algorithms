@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include "AlgorithmsList.hpp"
 
 using namespace std;
@@ -10,9 +9,10 @@ int main(int argc, char* argv[])
 
     list<AlgorithmsInfo>* infos = algorithmsList.GetList();
 
-    for each (AlgorithmsInfo var in *infos)
+    for(list<AlgorithmsInfo>::iterator itor = infos->begin();
+        itor!=infos->end(); itor++)
     {
-        cout << var.id << "\t[" << var.name << "]" << endl;
+        cout << itor->id << "\t[" << itor->name << "]" << endl;
     }
 
     cout << "\nPlease enter a id to run" << endl;
@@ -24,7 +24,5 @@ int main(int argc, char* argv[])
 
     algorithmsList.RunAlgorithmsByID(id);
 
-    Sleep(1000);
-    
     return 0;
 }

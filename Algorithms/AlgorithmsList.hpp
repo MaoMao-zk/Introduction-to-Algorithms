@@ -1,6 +1,6 @@
-#include "Algorithms.h";
-#include <map>;
-#include <list>;
+#include "Algorithms.h"
+#include <map>
+#include <list>
 
 class AlgorithmsList
 {
@@ -31,7 +31,10 @@ public:
         if (p == NULL)
             return false;
         else
+        {
             p->Run();
+            return true;
+        }
     }
 
 private:
