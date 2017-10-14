@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 
     list<AlgorithmsInfo>* infos = algorithmsList.GetList();
 
-    if(infos->length() <= 0)
+    if(infos->size() <= 0)
         return -1;
 
     for(list<AlgorithmsInfo>::iterator itor = infos->begin();

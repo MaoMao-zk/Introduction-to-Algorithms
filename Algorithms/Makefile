@@ -18,7 +18,7 @@ LD_FLAG :=
 SRC_FILE=$(foreach dir,$(SUB_DIR),$(shell ls $(dir)/*.cpp 2>/dev/null))
 SRC_NAME=$(notdir $(SRC_FILE))
 
-TARGET=$(OBJ_DIR)/test_makefile
+TARGET=$(ROOT_DIR)/algorithms_test
 OBJS=$(patsubst %.cpp,%.o,$(SRC_NAME))
 
 .PHONY:all clean
@@ -35,7 +35,7 @@ $(OBJS):
 	$(CC) $(CFLAGS) -c $(shell find ./ -name $(patsubst %.o,%.cpp,$@)) -o $(OBJ_DIR)/$@	
 	
 clean:
-	rm -rf $(OBJ_DIR)	
+	rm -rf $(OBJ_DIR) $(ROOT_DIR)/algorithms_test
 
 
 
