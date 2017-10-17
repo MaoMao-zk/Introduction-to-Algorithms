@@ -1,13 +1,13 @@
-#ifndef _INSERTION_SORT_H_
-#define _INSERTION_SORT_H_
+#ifndef _MERGE_SORT_H_
+#define _MERGE_SORT_H_
 
 #include "Algorithms.h"
 
-class InsertionSort : public Algorithms
+class MergeSort : public Algorithms
 {
 public:
-    InsertionSort();
-    virtual ~InsertionSort();
+    MergeSort();
+    virtual ~MergeSort();
 protected:
     virtual void m_BuildInput();
     virtual void m_Execute();

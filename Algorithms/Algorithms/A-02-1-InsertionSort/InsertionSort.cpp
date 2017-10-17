@@ -12,6 +12,15 @@ InsertionSort::InsertionSort()
     m_array = NULL;
 }
 
+InsertionSort::~InsertionSort()
+{
+    if(m_array != NULL)
+    {
+        delete []m_array;
+        m_array = NULL;
+    }
+}
+
 void InsertionSort::m_BuildInput()
 {
     printf("Please input array size:\n");

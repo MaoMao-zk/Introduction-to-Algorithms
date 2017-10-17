@@ -16,6 +16,7 @@ struct AlgorithmsInfo
 class Algorithms
 {
 public:
+    virtual ~Algorithms(){}
     AlgorithmsInfo& GetInfo()
     {
         assert(m_info.id != "");
@@ -29,7 +30,7 @@ public:
         gettimeofday(&tv1,NULL);
 
         m_Execute();
-        
+
         gettimeofday(&tv2,NULL);
         long long used_time = (tv2.tv_sec*1000*1000 + tv2.tv_usec) - (tv1.tv_sec*1000*1000 + tv1.tv_usec);
         long long seconds = used_time / (1000*1000);

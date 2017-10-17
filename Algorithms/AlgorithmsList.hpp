@@ -3,6 +3,7 @@
 #include <list>
 
 #include "InsertionSort.h"
+#include "MergeSort.h"
 
 class AlgorithmsList
 {
@@ -14,11 +15,23 @@ public:
         alg = new InsertionSort();
         m_list.push_back(alg->GetInfo());
         m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
+        
+        alg = new MergeSort();
+        m_list.push_back(alg->GetInfo());
+        m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
     }
 
     ~AlgorithmsList()
     {
+        m_list.clear();
 
+        for(map<string, Algorithms*>::iterator itor = m_map.begin();
+            itor!=m_map.end(); itor++)
+        {
+            delete itor->second;
+            itor->second =NULL;
+        }
+        m_map.clear();
     }
 
     list<AlgorithmsInfo>* GetList()
