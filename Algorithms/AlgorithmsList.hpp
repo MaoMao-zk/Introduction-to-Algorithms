@@ -39,9 +39,13 @@ public:
         }
 
         if (p == NULL)
+        {
+            perror("Can't find Algorithms\n");
             return false;
+        }
         else
         {
+            printf("[%s]%s run:\n", p->GetInfo().id.c_str(), p->GetInfo().name.c_str());
             p->Run();
             return true;
         }

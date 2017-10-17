@@ -22,9 +22,7 @@ int main(int argc, char* argv[])
 
     string id;
     cin >> id;
-
-    cout << id << " run:" << endl;
-
+    
     algorithmsList.RunAlgorithmsByID(id);
 
     return 0;

@@ -7,7 +7,13 @@ class InsertionSort : public Algorithms
 {
 public:
     InsertionSort();
-    virtual void Run();
+protected:
+    virtual void m_BuildInput();
+    virtual void m_Execute();
+    virtual void m_CheckOutput();
+private:
+    int m_size;
+    int* m_array;
 };
 
 #endif
