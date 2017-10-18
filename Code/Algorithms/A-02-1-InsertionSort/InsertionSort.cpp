@@ -5,7 +5,7 @@
 
 InsertionSort::InsertionSort()
 {
-    m_info.id = "2-1";
+    m_info.id = "A-2-1";
     m_info.name = "InsertionSort";
 
     m_size = 0;

@@ -21,6 +21,11 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+algorithms_test
+
+
+# Visual Studio Code options directory
+.vscode/
 
 # Visual Studio 2015 cache/options directory
 .vs/

@@ -1,6 +1,6 @@
 #include "Algorithms.h"
 #include <map>
-#include <list>
+#include <vector>
 
 #include "InsertionSort.h"
 #include "MergeSort.h"
@@ -34,9 +34,17 @@ public:
         m_map.clear();
     }
 
-    list<AlgorithmsInfo>* GetList()
+    vector<AlgorithmsInfo>* GetList()
     {
         return &m_list;
+    }
+    
+    bool RunAlgorithmsByIndex(unsigned int index)
+    {
+        if(index < m_list.size())
+            return RunAlgorithmsByID(m_list[index].id);
+        else
+            return false;
     }
 
     bool RunAlgorithmsByID(string id)
@@ -65,6 +73,6 @@ public:
     }
 
 private:
-    list<AlgorithmsInfo> m_list;
+    vector<AlgorithmsInfo> m_list;
     map<string, Algorithms*> m_map;
 };

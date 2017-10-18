@@ -5,7 +5,7 @@
 
 MergeSort::MergeSort()
 {
-    m_info.id = "2-3";
+    m_info.id = "A-2-3";
     m_info.name = "MergeSort";
 
     m_size = 0;

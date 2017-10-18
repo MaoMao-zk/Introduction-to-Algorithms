@@ -7,23 +7,23 @@ int main(int argc, char* argv[])
 {
     AlgorithmsList algorithmsList;
 
-    list<AlgorithmsInfo>* infos = algorithmsList.GetList();
+    vector<AlgorithmsInfo>* infos = algorithmsList.GetList();
 
     if(infos->size() <= 0)
         return -1;
 
-    for(list<AlgorithmsInfo>::iterator itor = infos->begin();
-        itor!=infos->end(); itor++)
+    cout << "Index" << "\t"<< "ID" << "\t" << "Name" << endl;
+    for(unsigned int i=0;i<infos->size(); i++)
     {
-        cout << itor->id << "\t[" << itor->name << "]" << endl;
+        cout << i << "\t"<< infos->at(i).id << "\t" << infos->at(i).name << endl;
     }
 
-    cout << "\nPlease enter a id to run" << endl;
+    cout << "\nPlease enter index to run" << endl;
 
-    string id;
-    cin >> id;
+    unsigned int index;
+    cin >> index;
     
-    algorithmsList.RunAlgorithmsByID(id);
+    algorithmsList.RunAlgorithmsByIndex(index);
 
     return 0;
 }
