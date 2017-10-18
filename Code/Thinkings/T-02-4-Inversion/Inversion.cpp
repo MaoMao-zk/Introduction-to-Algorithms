@@ -1,18 +1,19 @@
-#include "MergeSort.h"
+#include "Inversion.h"
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
 
-MergeSort::MergeSort()
+Inversion::Inversion()
 {
-    m_info.id = "A-2-3";
-    m_info.name = "MergeSort";
+    m_info.id = "T-2-4";
+    m_info.name = "Inversion";
 
     m_size = 0;
     m_array = NULL;
+    m_count = 0;
 }
 
-MergeSort::~MergeSort()
+Inversion::~Inversion()
 {
     if(m_array != NULL)
     {
@@ -21,7 +22,7 @@ MergeSort::~MergeSort()
     }
 }
 
-void MergeSort::m_BuildInput()
+void Inversion::m_BuildInput()
 {
     printf("Please input array size:\n");
     std::cin >> m_size;
@@ -33,14 +34,15 @@ void MergeSort::m_BuildInput()
     for(int i=0;i<m_size;i++)
     {
         m_array[i] = rand()%(m_size*10);
-        //printf("%d ", m_array[i]);
+        printf("%d ", m_array[i]);
     }
-    //std::cout<<endl;
+    std::cout<<endl;
 }
 
-void MergeSort::merge(int* array, int start, int middle, int end)
+long long Inversion::merge(int* array, int start, int middle, int end)
 {
     //printf("merge %d to %d to %d\n", start, middle, end);
+    long long count = 0;
     int ll = middle-start+2;
     int rl = end-middle+1;
     int* LA = new int[ll];
@@ -72,31 +74,38 @@ void MergeSort::merge(int* array, int start, int middle, int end)
         {
             array[k] = RA[j];
             j++;
+            count += ll-1 - i;
         }
     }
+
+    return count;
 }
 
-void MergeSort::merge_sort(int* array, int start, int end)
+long long Inversion::merge_sort(int* array, int start, int end)
 {
     //printf("merge_sort %d to %d\n", start, end);
     if(start < end)
     {
         int middle = start + ((end-start)/2);
+        long long count = 0;
         //Sort left-half array
-        merge_sort(array, start, middle);
+        count += merge_sort(array, start, middle);
         //Sort right-half array
-        merge_sort(array, middle+1, end);
+        count += merge_sort(array, middle+1, end);
         //Merge "left-half array" and "right-half array" to 1 sorted array
-        merge(array, start, middle, end);
+        count += merge(array, start, middle, end);
+        return count;
     }
+    else
+        return 0;
 }
 
-void MergeSort::m_Execute()
+void Inversion::m_Execute()
 {
-    merge_sort(m_array, 0, m_size-1);
+    m_count = merge_sort(m_array, 0, m_size-1);
 }
 
-void MergeSort::m_CheckOutput()
+void Inversion::m_CheckOutput()
 {
     /*
     for(int i=0;i<m_size;i++)
@@ -104,4 +113,5 @@ void MergeSort::m_CheckOutput()
         printf("%d ", m_array[i]);
     }
     std::cout<<endl;*/
+    cout << "Inversion count is " << m_count << endl;
 }

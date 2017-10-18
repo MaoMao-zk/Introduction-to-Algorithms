@@ -13,6 +13,9 @@ protected:
     virtual void m_Execute();
     virtual void m_CheckOutput();
 private:
+    static void merge_sort(int* array, int start, int end);
+    static void merge(int* array, int start, int middle, int end);
+private:
     int m_size;
     int* m_array;
 };

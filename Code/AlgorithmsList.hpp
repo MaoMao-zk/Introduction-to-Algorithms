@@ -4,6 +4,7 @@
 
 #include "InsertionSort.h"
 #include "MergeSort.h"
+#include "Inversion.h"
 
 class AlgorithmsList
 {
@@ -17,6 +18,10 @@ public:
         m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
         
         alg = new MergeSort();
+        m_list.push_back(alg->GetInfo());
+        m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
+        
+        alg = new Inversion();
         m_list.push_back(alg->GetInfo());
         m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
     }
