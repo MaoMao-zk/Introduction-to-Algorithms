@@ -5,25 +5,17 @@
 #include "InsertionSort.h"
 #include "MergeSort.h"
 #include "Inversion.h"
+#include "MaxSubArray.h"
 
 class AlgorithmsList
 {
 public:
     AlgorithmsList()
     {
-        Algorithms* alg = NULL;
-
-        alg = new InsertionSort();
-        m_list.push_back(alg->GetInfo());
-        m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
-        
-        alg = new MergeSort();
-        m_list.push_back(alg->GetInfo());
-        m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
-        
-        alg = new Inversion();
-        m_list.push_back(alg->GetInfo());
-        m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
+        m_AddAlorithms(new InsertionSort());
+        m_AddAlorithms(new MergeSort());
+        m_AddAlorithms(new Inversion());
+        m_AddAlorithms(new MaxSubArray());
     }
 
     ~AlgorithmsList()
@@ -75,6 +67,15 @@ public:
             p->Run();
             return true;
         }
+    }
+
+private:
+    void m_AddAlorithms(Algorithms* alg)
+    {
+        assert(alg != NULL);
+
+        m_list.push_back(alg->GetInfo());
+        m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
     }
 
 private:
