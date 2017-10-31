@@ -38,6 +38,7 @@ void MaxSubArray::m_BuildInput()
     }
     std::cout<<endl;
     /*
+    //Example in book
     static int array[16] = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
     m_size = 16;
     m_array = array;
