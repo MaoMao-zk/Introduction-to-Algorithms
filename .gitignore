@@ -21,7 +21,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-algorithms_test
+algorithms_test*
+*.o
 
 
 # Visual Studio Code options directory
