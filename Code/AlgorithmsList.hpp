@@ -6,6 +6,7 @@
 #include "MergeSort.h"
 #include "Inversion.h"
 #include "MaxSubArray.h"
+#include "MatrixMultiply.h"
 
 class AlgorithmsList
 {
@@ -16,6 +17,7 @@ public:
         m_AddAlorithms(new MergeSort());
         m_AddAlorithms(new Inversion());
         m_AddAlorithms(new MaxSubArray());
+        m_AddAlorithms(new MatrixMultiply());
     }
 
     ~AlgorithmsList()
