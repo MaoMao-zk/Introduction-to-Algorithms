@@ -1,4 +1,5 @@
 #include "Algorithms.h"
+#include <assert.h>
 #include <map>
 #include <vector>
 

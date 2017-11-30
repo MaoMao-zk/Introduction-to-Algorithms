@@ -1,4 +1,6 @@
 #include "InsertionSort.h"
+#include "Utils.h"
+#include <assert.h>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
@@ -54,11 +56,7 @@ void InsertionSort::m_Execute()
     }
 }
 
-void InsertionSort::m_CheckOutput()
+bool InsertionSort::m_CheckOutput()
 {
-    for(int i=0;i<m_size;i++)
-    {
-        printf("%d ", m_array[i]);
-    }
-    std::cout<<endl;
+    return Utils::CheckArraySort(m_array, m_size);
 }

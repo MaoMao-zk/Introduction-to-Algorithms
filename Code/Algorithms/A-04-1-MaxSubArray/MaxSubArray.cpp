@@ -1,4 +1,5 @@
 #include "MaxSubArray.h"
+#include <assert.h>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
@@ -119,7 +120,7 @@ void MaxSubArray::m_Execute()
     m_result = find_max_subarray(m_array, 0, m_size-1);
 }
 
-void MaxSubArray::m_CheckOutput()
+bool MaxSubArray::m_CheckOutput()
 {
     printf("max subarray is :\n");
 
@@ -128,4 +129,6 @@ void MaxSubArray::m_CheckOutput()
         printf("%d ", m_array[i]);
     }
     printf("\nsum is %d\n", m_result.sum);
+
+    return true;
 }

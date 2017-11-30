@@ -1,4 +1,6 @@
 #include "MergeSort.h"
+#include "Utils.h"
+#include <assert.h>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
@@ -96,12 +98,7 @@ void MergeSort::m_Execute()
     merge_sort(m_array, 0, m_size-1);
 }
 
-void MergeSort::m_CheckOutput()
+bool MergeSort::m_CheckOutput()
 {
-    /*
-    for(int i=0;i<m_size;i++)
-    {
-        printf("%d ", m_array[i]);
-    }
-    std::cout<<endl;*/
+    return Utils::CheckArraySort(m_array, m_size);
 }

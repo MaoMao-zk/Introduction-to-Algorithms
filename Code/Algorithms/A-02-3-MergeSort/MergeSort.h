@@ -11,7 +11,7 @@ public:
 protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
-    virtual void m_CheckOutput();
+    virtual bool m_CheckOutput();
 private:
     static void merge_sort(int* array, int start, int end);
     static void merge(int* array, int start, int middle, int end);

@@ -18,7 +18,7 @@ public:
 protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
-    virtual void m_CheckOutput();
+    virtual bool m_CheckOutput();
 private:
     static MaxSubArrayResult find_max_subarray(int* array, int start, int end);
     static MaxSubArrayResult find_max_cross_subarray(int* array, int start, int middle, int end);

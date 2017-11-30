@@ -11,7 +11,7 @@ public:
 protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
-    virtual void m_CheckOutput();
+    virtual bool m_CheckOutput();
 private:
     int m_size;
     int* m_array;

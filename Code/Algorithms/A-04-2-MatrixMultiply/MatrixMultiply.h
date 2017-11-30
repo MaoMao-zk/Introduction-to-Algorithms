@@ -11,7 +11,7 @@ public:
 protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
-    virtual void m_CheckOutput();
+    virtual bool m_CheckOutput();
 private:
     static void matrix_print(int** matrix, int n);
     //in:  matrixA matrixB

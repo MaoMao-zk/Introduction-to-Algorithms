@@ -1,4 +1,5 @@
 #include "Inversion.h"
+#include <assert.h>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
@@ -105,7 +106,7 @@ void Inversion::m_Execute()
     m_count = merge_sort(m_array, 0, m_size-1);
 }
 
-void Inversion::m_CheckOutput()
+bool Inversion::m_CheckOutput()
 {
     /*
     for(int i=0;i<m_size;i++)
@@ -114,4 +115,5 @@ void Inversion::m_CheckOutput()
     }
     std::cout<<endl;*/
     cout << "Inversion count is " << m_count << endl;
+    return true;
 }

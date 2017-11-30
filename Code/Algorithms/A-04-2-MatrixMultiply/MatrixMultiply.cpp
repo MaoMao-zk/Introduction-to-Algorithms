@@ -1,5 +1,5 @@
 #include "MatrixMultiply.h"
-
+#include <assert.h>
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
@@ -239,7 +239,8 @@ void MatrixMultiply::m_Execute()
     m_matrixC = matrix_multiply_recursive(m_matrixA, m_matrixB, m_size);
 }
 
-void MatrixMultiply::m_CheckOutput()
+bool MatrixMultiply::m_CheckOutput()
 {
     matrix_print(m_matrixC, m_size);
+    return true;
 }
