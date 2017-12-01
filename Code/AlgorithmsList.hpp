@@ -8,6 +8,7 @@
 #include "Inversion.h"
 #include "MaxSubArray.h"
 #include "MatrixMultiply.h"
+#include "HeapSort.h"
 
 class AlgorithmsList
 {
@@ -19,6 +20,7 @@ public:
         m_AddAlorithms(new Inversion());
         m_AddAlorithms(new MaxSubArray());
         m_AddAlorithms(new MatrixMultiply());
+        m_AddAlorithms(new HeapSort());
     }
 
     ~AlgorithmsList()
