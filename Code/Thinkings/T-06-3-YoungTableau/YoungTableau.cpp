@@ -16,7 +16,7 @@ YoungTableau::~YoungTableau()
 {
     if(m_tableau != NULL)
     {
-        for(int i=0;i<m;i++)
+        for(int i=0;i<m_size_m;i++)
         {
             delete [] m_tableau[i];
         }
@@ -41,22 +41,22 @@ void YoungTableau::m_BuildInput()
 
 void YoungTableau::m_Execute()
 {
-    printf("");
+    //printf("");
 }
 
 bool YoungTableau::m_CheckOutput()
 {
     bool result = true;
-    for(int i=0;i<m;i++)
+    for(int i=0;i<m_size_m;i++)
     {
-        for(int j=0;j<n;j++)
+        for(int j=0;j<m_size_n;j++)
         {
-            if(j<n-1 && m_tableau[i][j] > m_tableau[i][j+1])
+            if(j<m_size_n-1 && m_tableau[i][j] > m_tableau[i][j+1])
             {
                 result = false;
                 break;
             }
-            if(i<m-1 && m_tableau[i][j] > m_tableau[i+1][j])
+            if(i<m_size_m-1 && m_tableau[i][j] > m_tableau[i+1][j])
             {
                 result = false;
                 break;
