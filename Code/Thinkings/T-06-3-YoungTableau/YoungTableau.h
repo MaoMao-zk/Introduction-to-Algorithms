@@ -14,13 +14,15 @@ protected:
     virtual bool m_CheckOutput();
 private:
     //O(m+n)
-    int m_ExtractMin();
+    int m_ExtractMin(int** tableau, int m, int n, int& current_size);
     //O(m+n)
-    bool m_Insert(int a);
+    bool m_Insert(int** tableau, int m, int n, int& current_size, int a);
     //O(n^3)
-    int* m_Sort();
+    int* m_Sort(int** tableau, int m, int n, int current_size);
     //O(m+n)
-    bool m_CheckExist();
+    bool m_CheckExist(int** tableau, int m, int n, int current_size, int a);
+private:
+    void m_Print();
 private:
     int m_size_m;
     int m_size_n;
