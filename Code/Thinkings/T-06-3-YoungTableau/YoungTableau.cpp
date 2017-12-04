@@ -106,7 +106,7 @@ bool YoungTableau::m_Insert(int** tableau, int m, int n, int& current_size, int 
         return true;
     }
 
-    //1. set 'a' to ;ast positon
+    //1. set 'a' to last positon
     int last_r = (current_size-1) / n;
     int last_c = (current_size-1) % n;
     tableau[last_r][last_c] = a;
@@ -154,7 +154,23 @@ bool YoungTableau::m_Insert(int** tableau, int m, int n, int& current_size, int 
 
 int* YoungTableau::m_Sort(int** tableau, int m, int n, int current_size)
 {
+    int current_size_copy = current_size;
+    int** tableau_copy = new int* [m];
+    for(int i=0;i<m;i++)
+    {
+        tableau_copy[i] = new int[n];
+        for(int j=0;j<n;j++)
+            tableau_copy[i][j] = tableau[i][j];
+    }
 
+    int* array = new int [current_size];
+
+    for(int i=0;current_size_copy>0;i++)
+    {
+        array[i] = m_ExtractMin(tableau_copy, m, n, current_size_copy);
+    }
+    
+    return array;
 }
 
 bool YoungTableau::m_CheckExist(int** tableau, int m, int n, int current_size, int a)
@@ -164,42 +180,26 @@ bool YoungTableau::m_CheckExist(int** tableau, int m, int n, int current_size, i
     if(current_size<=0)
         return false;
     
-    //Check from 0
-    int i=0;
+    //Check from left-down node
+    //Ref: https://www.cnblogs.com/shuaiwhu/archive/2011/03/21/2065075.html
+    int i = (current_size-1) / n;
     int j=0;
     do
     {
-        //check right and down, goto little than 'a' and nearly than 'a'
-        int goto_r = i, goto_c = j;
-        //check right
-        if(j+1<n && tableau[i][j+1] != -1 && tableau[i][j+1] <= a)
+        if(tableau[i][j] == a)
         {
-            goto_r = i;
-            goto_c = j+1;
-        }
-        //chack down
-        if(j+1<n && tableau[i+1][j] != -1 && tableau[i+1][j] <= a && ((a-tableau[i][j+1]) <= (a-tableau[i+1][j]))  )
-        {
-            goto_r = i+1;
-            goto_c = j;
-        }
-
-        //have in right positon
-        if(goto_r == i && goto_c == j)
-        {
-            if(tableau[i][j] == a)
-                result = true;
-            else
-                result = false;
+            result = true;
             break;
         }
-        else
+        else if(tableau[i][j] > a)
         {
-            //gogogo
-            i = goto_r;
-            j = goto_c;
+            i--;
         }
-    }while(1);
+        else if(tableau[i][j] < a)
+        {
+            j++;
+        }
+    }while(i>=0 && j<n);
 
     return result;
 }
@@ -253,7 +253,7 @@ void YoungTableau::m_Execute()
                 int* array = m_Sort(m_tableau, m_size_m, m_size_n, m_current_size);
                 for(int i=0;i<m_current_size;i++)
                     printf("%d ", array[i]);
-                printf("/n");
+                printf("\n");
                 delete [] array;
                 break;
             }
@@ -267,7 +267,8 @@ void YoungTableau::m_Execute()
                 break;
             }
         }
-        m_Print();
+        bool result = m_CheckOutput();
+        printf("Check output %s\n", result?"successed":"failed");
     }while(choice>0);
     //printf("");
 }
@@ -292,12 +293,12 @@ bool YoungTableau::m_CheckOutput()
         for(int j=0;j<m_size_n;j++)
         {
             printf("%d ", m_tableau[i][j]);
-            if(j<m_size_n-1 && m_tableau[i][j] > m_tableau[i][j+1])
+            if(j<m_size_n-2 && m_tableau[i][j+1] != -1 && m_tableau[i][j] > m_tableau[i][j+1])
             {
                 result = false;
                 break;
             }
-            if(i<m_size_m-1 && m_tableau[i][j] > m_tableau[i+1][j])
+            if(i<m_size_m-2 && m_tableau[i+1][j] != -1  && m_tableau[i][j] > m_tableau[i+1][j])
             {
                 result = false;
                 break;
