@@ -9,6 +9,7 @@
 #include "MaxSubArray.h"
 #include "MatrixMultiply.h"
 #include "HeapSort.h"
+#include "YoungTableau.h"
 
 class AlgorithmsList
 {
@@ -21,6 +22,7 @@ public:
         m_AddAlorithms(new MaxSubArray());
         m_AddAlorithms(new MatrixMultiply());
         m_AddAlorithms(new HeapSort());
+        m_AddAlorithms(new YoungTableau());
     }
 
     ~AlgorithmsList()
