@@ -1,6 +1,8 @@
 # Introduction-of-Algorithms
 Learning &lt;&lt;Introduction of Algorithms>>, and push Algorithms and Practices to server for management and sharing.
 
+![Build Status](https://www.travis-ci.org/maomao9003/Introduction-of-Algorithms.svg?branch=master)
+
 ## Code
 Code include some realization of Algorithms, Practice and Thinking in Book.  
 If you have doubt about the realization of Algorithms, Practice and Thinking in Book, you can **referrence** it.  
