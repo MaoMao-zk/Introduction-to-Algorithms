@@ -1,5 +1,5 @@
 #include "Utils.h"
-
+#include <stdio.h>
 
 bool Utils::CheckArraySort(int* array, int size)
 {
@@ -15,4 +15,20 @@ bool Utils::CheckArraySort(int* array, int size)
     }
 
     return result;
+}
+
+void Utils::PrintArray(int* array, int size)
+{
+    for(int i=0;i<size;i++)
+    {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+}
+
+void Utils::Exchange(int& a, int& b)
+{
+    int tmp = a;
+    a = b;
+    b = tmp;
 }

@@ -10,6 +10,7 @@
 #include "MatrixMultiply.h"
 #include "HeapSort.h"
 #include "YoungTableau.h"
+#include "QuickSort.h"
 
 class AlgorithmsList
 {
@@ -23,6 +24,7 @@ public:
         m_AddAlorithms(new MatrixMultiply());
         m_AddAlorithms(new HeapSort());
         m_AddAlorithms(new YoungTableau());
+        m_AddAlorithms(new QuickSort());
     }
 
     ~AlgorithmsList()
