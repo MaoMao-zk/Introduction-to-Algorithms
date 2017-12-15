@@ -11,6 +11,7 @@
 #include "HeapSort.h"
 #include "YoungTableau.h"
 #include "QuickSort.h"
+#include "CountingSort.h"
 
 class AlgorithmsList
 {
@@ -25,6 +26,7 @@ public:
         m_AddAlorithms(new HeapSort());
         m_AddAlorithms(new YoungTableau());
         m_AddAlorithms(new QuickSort());
+        m_AddAlorithms(new CountingSort());
     }
 
     ~AlgorithmsList()
