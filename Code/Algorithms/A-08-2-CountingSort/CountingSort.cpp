@@ -16,7 +16,9 @@ void counting_sort(int* array, int size, int max_value)
     //counting
     for(int i=0;i<size;i++)
         counting_array[array[i]]++;
-    
+
+//Simple sorting
+#if 1
     //sorting
     int i=0;
     for(int j=0;j<max_value;j++)
@@ -30,6 +32,24 @@ void counting_sort(int* array, int size, int max_value)
             }
         }
     }
+//Sorting in book
+#else
+    //counting_array[i] will be the right position of i
+    for(int i=1;i<max_value;i++)
+        counting_array[i] += counting_array[i-1];
+    
+    //sorting
+    int* tmp_array = new int[size];
+    for(int i=size-1;i>=0;i--)
+    {
+        tmp_array[counting_array[array[i]]-1] = array[i];
+        counting_array[array[i]]--;
+    }
+    
+    //copy to array
+    for(int i=0;i<size;i++)
+        array[i] = tmp_array[i];
+#endif
 }
 
 CountingSort::CountingSort()
@@ -65,7 +85,7 @@ void CountingSort::m_BuildInput()
     {
         m_array[i] = rand()%(m_max_value);
     }
-    Utils::PrintArray(m_array, m_size);
+    //Utils::PrintArray(m_array, m_size);
 }
 
 void CountingSort::m_Execute()
@@ -75,6 +95,6 @@ void CountingSort::m_Execute()
 
 bool CountingSort::m_CheckOutput()
 {
-    Utils::PrintArray(m_array, m_size);
+    //Utils::PrintArray(m_array, m_size);
     return Utils::CheckArraySort(m_array, m_size);
 }
