@@ -5,35 +5,7 @@
 #include <time.h>
 #include <iostream>
 
-void MaxHeapify(int* array, int size, int i)
-{
-    while(i<size)
-    {
-        int left = i*2 + 1;
-        int right = left + 1;
-        int largest;
-        
-        if(left < size && array[left]>=array[i])
-            largest = left;
-        else
-            largest = i;
-        
-        if(right < size && array[right]>=array[largest])
-            largest = right;
-        
-        if(largest != i)
-        {
-            //exchange largest and head
-            int tmp = array[i];
-            array[i] = array[largest];
-            array[largest] = tmp;
-
-            i = largest;
-        }
-        else
-            break;
-    }
-}
+extern void heap_sort(int* array, int size);
 
 HeapSort::HeapSort()
 {
@@ -73,24 +45,7 @@ void HeapSort::m_BuildInput()
 
 void HeapSort::m_Execute()
 {
-    //1. Build max heap
-    for(int i=m_size/2-1;i>=0;i--)
-    {
-        MaxHeapify(m_array, m_size, i);
-    }
-
-    //2. Find the max-value -> min-value one by one
-    for(int size=m_size;size>=2;)
-    {
-        //2.1 exchange max value to end
-        int tmp = m_array[0];
-        m_array[0] = m_array[size-1];
-        m_array[size-1] = tmp;
-
-        //2.2 max heapity again
-        size--;
-        MaxHeapify(m_array, size, 0);
-    }
+    heap_sort(m_array, m_size);
 }
 
 bool HeapSort::m_CheckOutput()

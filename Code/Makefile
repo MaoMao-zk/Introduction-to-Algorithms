@@ -13,9 +13,11 @@ CFLAGS=-ICommon -Wall -std=c++11 -g
 
 ###src file###
 SRC_FILE=$(foreach dir,$(SUB_DIR),$(shell ls $(dir)/*.cpp 2>/dev/null))
+SRC_C_FILE=$(foreach dir,$(SUB_DIR),$(shell ls $(dir)/*.c 2>/dev/null))
 
 TARGET=$(ROOT_DIR)/algorithms_test
 OBJS=$(patsubst %.cpp,%.o,$(SRC_FILE))
+OBJS+=$(patsubst %.c,%.o,$(SRC_C_FILE))
 
 .PHONY:all clean
 
@@ -28,6 +30,9 @@ Entry.o:Entry.cpp AlgorithmsList.hpp $(OBJS)
 	$(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@	
 
 %.o:%.cpp %.h $(COMMON_INC)
+	$(CC) $(CFLAGS) -c $< -o $@	
+
+%.o:%.c %.h $(COMMON_INC)
 	$(CC) $(CFLAGS) -c $< -o $@	
 
 clean:
