@@ -14,14 +14,6 @@ protected:
     virtual bool m_CheckOutput();
 private:
     static void matrix_print(int** matrix, int n);
-    //in:  matrixA matrixB
-    //out: matrixC
-    static void matrix_add(int** matrixA, int ** matrixB, int ** matrixC, int n);
-    //n: size of matrixPartition
-    static void matrix_partition(int** matrix, int **** matrixPartition, int n);
-    //n: size of matrixPartition
-    static void matrix_combine(int **** matrixPartition, int** matrix, int n);
-    static int** matrix_multiply_recursive(int** matrixA, int ** matrixB, int n);
 private:
     int m_size;
     int** m_matrixA;
