@@ -6,6 +6,8 @@
 #include <time.h>
 #include <iostream>
 
+using namespace std;
+
 extern MaxSubArrayResult find_max_subarray(int* array, int start, int end);
 
 MaxSubArray::MaxSubArray()

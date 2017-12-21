@@ -6,6 +6,8 @@
 #include <time.h>
 #include <iostream>
 
+using namespace std;
+
 extern long long inversion_count(int* array, int start, int end);
 
 Inversion::Inversion()

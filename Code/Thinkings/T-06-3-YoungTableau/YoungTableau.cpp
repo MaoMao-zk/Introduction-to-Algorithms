@@ -6,6 +6,8 @@
 #include <time.h>
 #include <iostream>
 
+using namespace std;
+
 extern int young_tableau_extract_min(int** tableau, int m, int n, int& current_size);
 extern bool young_tableau_insert(int** tableau, int m, int n, int& current_size, int a);
 extern int* young_tableau_sort(int** tableau, int m, int n, int current_size);
