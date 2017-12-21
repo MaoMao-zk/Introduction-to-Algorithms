@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #include "MatrixMultiply.h"
 #include <assert.h>
 #include <stdlib.h>
@@ -29,22 +31,22 @@ MatrixMultiply::~MatrixMultiply()
 void MatrixMultiply::m_BuildInput()
 {
     printf("Please input matrix size(n of 2^n) :\n");
-    
+
     int n;
     std::cin >> n;
-    assert(n>=0);
+    assert(n >= 0);
 
     m_size = 1;
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
         m_size *= 2;
 
     m_matrixA = new_2v_array(m_size);
     m_matrixB = new_2v_array(m_size);
 
     srand(time(NULL));
-    for(int i=0;i<m_size;i++)
+    for (int i = 0; i < m_size; i++)
     {
-        for(int j=0;j<m_size;j++)
+        for (int j = 0; j < m_size; j++)
         {
             m_matrixA[i][j] = rand()%100;
             m_matrixB[i][j] = rand()%100;
@@ -62,9 +64,9 @@ void MatrixMultiply::m_BuildInput()
 
 void MatrixMultiply::matrix_print(int** matrix, int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j=0;j<n;j++)
+        for (int j = 0; j < n; j++)
         {
             printf("%2d ", matrix[i][j]);
         }

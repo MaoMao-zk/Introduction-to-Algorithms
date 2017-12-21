@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #ifndef _MATRIX_MULTIPLY_H_
 #define _MATRIX_MULTIPLY_H_
 
@@ -5,16 +7,16 @@
 
 class MatrixMultiply : public Algorithms
 {
-public:
+ public:
     MatrixMultiply();
     virtual ~MatrixMultiply();
-protected:
+ protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
     virtual bool m_CheckOutput();
-private:
+ private:
     static void matrix_print(int** matrix, int n);
-private:
+ private:
     int m_size;
     int** m_matrixA;
     int** m_matrixB;

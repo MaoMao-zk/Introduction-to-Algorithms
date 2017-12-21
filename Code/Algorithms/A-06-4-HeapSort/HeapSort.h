@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #ifndef _HEAP_SORT_H_
 #define _HEAP_SORT_H_
 
@@ -5,14 +7,14 @@
 
 class HeapSort : public Algorithms
 {
-public:
+ public:
     HeapSort();
     virtual ~HeapSort();
-protected:
+ protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
     virtual bool m_CheckOutput();
-private:
+ private:
     int m_size;
     int* m_array;
 };

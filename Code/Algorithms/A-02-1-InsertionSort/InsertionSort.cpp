@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #include "InsertionSort.h"
 #include "Utils.h"
 #include <assert.h>
@@ -18,7 +20,7 @@ InsertionSort::InsertionSort()
 
 InsertionSort::~InsertionSort()
 {
-    if(m_array != NULL)
+    if (m_array != NULL)
     {
         delete []m_array;
         m_array = NULL;
@@ -29,17 +31,17 @@ void InsertionSort::m_BuildInput()
 {
     printf("Please input array size:\n");
     std::cin >> m_size;
-    assert(m_size>0);
+    assert(m_size > 0);
 
     m_array = new int[m_size];
 
     srand(time(NULL));
-    for(int i=0;i<m_size;i++)
+    for (int i = 0; i < m_size; i++)
     {
         m_array[i] = rand()%(m_size*10);
         printf("%d ", m_array[i]);
     }
-    std::cout<<endl;
+    std::cout << endl;
 }
 
 void InsertionSort::m_Execute()

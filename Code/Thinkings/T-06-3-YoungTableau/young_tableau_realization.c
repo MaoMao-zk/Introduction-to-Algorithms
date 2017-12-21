@@ -1,56 +1,57 @@
+// Copyright [2017] <MaoMao>
 
 int young_tableau_extract_min(int** tableau, int m, int n, int& current_size)
 {
-    if(current_size<=0)
+    if (current_size <= 0)
         return -1;
-    
+
     int min = tableau[0][0];
 
     current_size--;
 
-    //no data left
-    if(current_size == 0)
+    // no data left
+    if (current_size == 0)
     {
         tableau[0][0] = -1;
         return min;
     }
 
-    //1. exchange last data to first position
+    // 1. exchange last data to first position
     int last_r = current_size / n;
     int last_c = current_size % n;
     tableau[0][0] = tableau[last_r][last_c];
     tableau[last_r][last_c] = -1;
 
-    //printf("m=%d, n=%d, current_size=%d, last_r=%d, last_c=%d \n", m, n, current_size, last_r, last_c);
+    // printf("m=%d, n=%d, current_size=%d, last_r=%d, last_c=%d \n", m, n, current_size, last_r, last_c);
 
-    //m_Print();
+    // m_Print();
 
-    //2. move data in first postion to right positon
-    int i=0;
-    int j=0;
+    // 2. move data in first postion to right positon
+    int i = 0;
+    int j = 0;
     do
     {
-        //exchange current data with min data in right data and down data
+        // exchange current data with min data in right data and down data
         int exchange_r = i, exchange_c = j;
-        //check right
-        if(j+1<n && tableau[i][j+1] != -1 && tableau[i][j+1] < tableau[i][j])
+        // check right
+        if (j+1 < n && tableau[i][j+1] != -1 && tableau[i][j+1] < tableau[i][j])
         {
             exchange_r = i;
             exchange_c = j+1;
         }
-        //chack down
-        if(i+1<n && tableau[i+1][j] != -1 && tableau[i+1][j] < tableau[exchange_r][exchange_c])
+        // chack down
+        if (i+1 < n && tableau[i+1][j] != -1 && tableau[i+1][j] < tableau[exchange_r][exchange_c])
         {
             exchange_r = i+1;
             exchange_c = j;
         }
 
-        //have in right positon
-        if(exchange_r == i && exchange_c == j)
+        // have in right positon
+        if (exchange_r == i && exchange_c == j)
             break;
         else
         {
-            //exchange
+            // exchange
             int tmp = tableau[i][j];
             tableau[i][j] = tableau[exchange_r][exchange_c];
             tableau[exchange_r][exchange_c] = tmp;
@@ -64,53 +65,53 @@ int young_tableau_extract_min(int** tableau, int m, int n, int& current_size)
 
 bool young_tableau_insert(int** tableau, int m, int n, int& current_size, int a)
 {
-    //Fule
-    if(current_size == m*n)
+    // Fule
+    if (current_size == m*n)
         return false;
-    
+
     current_size++;
 
-    if(current_size == 1)
+    if (current_size == 1)
     {
         tableau[0][0] = a;
         return true;
     }
 
-    //1. set 'a' to last positon
+    // 1. set 'a' to last positon
     int last_r = (current_size-1) / n;
     int last_c = (current_size-1) % n;
     tableau[last_r][last_c] = a;
 
-    //printf("m=%d, n=%d, current_size=%d, a=%d, last_r=%d, last_c=%d \n", m, n, current_size, a, last_r, last_c);
+    // printf("m=%d, n=%d, current_size=%d, a=%d, last_r=%d, last_c=%d \n", m, n, current_size, a, last_r, last_c);
 
-    //m_Print();
+    // m_Print();
 
-    //move 'a' n to right positon
-    int i=last_r;
-    int j=last_c;
+    // move 'a' n to right positon
+    int i = last_r;
+    int j = last_c;
     do
     {
         //exchange current data with max data in left data and up data
         int exchange_r = i, exchange_c = j;
-        //check left
-        if(j>0 && tableau[i][j-1] > tableau[i][j])
+        // check left
+        if (j > 0 && tableau[i][j-1] > tableau[i][j])
         {
             exchange_r = i;
             exchange_c = j-1;
         }
-        //chack up
-        if(i>0 && tableau[i-1][j] > tableau[exchange_r][exchange_c])
+        // chack up
+        if (i > 0 && tableau[i-1][j] > tableau[exchange_r][exchange_c])
         {
             exchange_r = i-1;
             exchange_c = j;
         }
 
-        //have in right positon
-        if(exchange_r == i && exchange_c == j)
+        // have in right positon
+        if ( exchange_r == i && exchange_c == j)
             break;
         else
         {
-            //exchange
+            // exchange
             int tmp = tableau[i][j];
             tableau[i][j] = tableau[exchange_r][exchange_c];
             tableau[exchange_r][exchange_c] = tmp;
@@ -126,20 +127,20 @@ int* young_tableau_sort(int** tableau, int m, int n, int current_size)
 {
     int current_size_copy = current_size;
     int** tableau_copy = new int* [m];
-    for(int i=0;i<m;i++)
+    for (int i = 0; i < m; i++)
     {
         tableau_copy[i] = new int[n];
-        for(int j=0;j<n;j++)
+        for (int j = 0; j < n; j++)
             tableau_copy[i][j] = tableau[i][j];
     }
 
-    int* array = new int [current_size];
+    int* array = new int[current_size];
 
-    for(int i=0;current_size_copy>0;i++)
+    for (int i = 0; current_size_copy > 0; i++)
     {
         array[i] = young_tableau_extract_min(tableau_copy, m, n, current_size_copy);
     }
-    
+
     return array;
 }
 
@@ -147,29 +148,29 @@ bool young_tableau_check_exist(int** tableau, int m, int n, int current_size, in
 {
     bool result = false;
 
-    if(current_size<=0)
+    if (current_size <= 0)
         return false;
-    
-    //Check from left-down node
-    //Ref: https://www.cnblogs.com/shuaiwhu/archive/2011/03/21/2065075.html
+
+    // Check from left-down node
+    // Ref: https://www.cnblogs.com/shuaiwhu/archive/2011/03/21/2065075.html
     int i = (current_size-1) / n;
-    int j=0;
+    int j = 0;
     do
     {
-        if(tableau[i][j] == a)
+        if (tableau[i][j] == a)
         {
             result = true;
             break;
         }
-        else if(tableau[i][j] > a)
+        else if (tableau[i][j] > a)
         {
             i--;
         }
-        else if(tableau[i][j] < a)
+        else if (tableau[i][j] < a)
         {
             j++;
         }
-    }while(i>=0 && j<n);
+    }while(i >= 0 && j < n);
 
     return result;
 }
