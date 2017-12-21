@@ -18,7 +18,9 @@ int main(int argc, char* argv[])
     cout << "Index" << "\t"<< "ID" << "\t" << "Name" << endl;
     for (unsigned int i = 0; i < infos->size(); i++)
     {
-        cout << i << "\t"<< infos->at(i).id << "\t" << infos->at(i).name << endl;
+        cout << i << "\t" \
+             << infos->at(i).id << "\t" \
+             << infos->at(i).name << endl;
     }
 
     cout << "\nPlease enter index to run" << endl;
