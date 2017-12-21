@@ -8,8 +8,8 @@
 
 using namespace std;
 
-extern int young_tableau_extract_min(int** tableau, int m, int n, int& current_size);
-extern bool young_tableau_insert(int** tableau, int m, int n, int& current_size, int a);
+extern int young_tableau_extract_min(int** tableau, int m, int n, int* current_size);
+extern bool young_tableau_insert(int** tableau, int m, int n, int* current_size, int a);
 extern int* young_tableau_sort(int** tableau, int m, int n, int current_size);
 extern bool young_tableau_check_exist(int** tableau, int m, int n, int current_size, int a);
 
@@ -70,7 +70,7 @@ void YoungTableau::m_Execute()
         {
             case 1:
             {
-                int min = young_tableau_extract_min(m_tableau, m_size_m, m_size_n, m_current_size);
+                int min = young_tableau_extract_min(m_tableau, m_size_m, m_size_n, &m_current_size);
                 printf("Extracted min value is %d\n", min);
                 break;
             }
@@ -80,7 +80,7 @@ void YoungTableau::m_Execute()
                 printf("Input a value(>0) insert to YoungTableau.\n");
                 cin >> i;
                 assert(i > 0);
-                young_tableau_insert(m_tableau, m_size_m, m_size_n, m_current_size, i);
+                young_tableau_insert(m_tableau, m_size_m, m_size_n, &m_current_size, i);
                 break;
             }
             case 3:

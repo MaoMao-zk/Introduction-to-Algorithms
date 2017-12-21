@@ -28,9 +28,9 @@ void Utils::PrintArray(int* array, int size)
     printf("\n");
 }
 
-void Utils::Exchange(int& a, int& b)
+void Utils::Exchange(int* a, int* b)
 {
-    int tmp = a;
-    a = b;
-    b = tmp;
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
 }

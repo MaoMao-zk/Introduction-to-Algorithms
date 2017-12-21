@@ -8,7 +8,7 @@ class Utils
  public:
     static bool CheckArraySort(int* array, int size);
     static void PrintArray(int* array, int size);
-    static void Exchange(int& a, int& b);
+    static void Exchange(int* a, int* b);
 };
 
 #endif
