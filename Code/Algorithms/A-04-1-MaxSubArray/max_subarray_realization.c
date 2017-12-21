@@ -34,7 +34,6 @@ MaxSubArrayResult find_max_cross_subarray(int* array, int start, int middle, int
         }
     }
 
-    // printf("find_max_cross_subarray(%d, %d, %d) -> [%d, %d, %d]\n", start, middle, end, left_max, right_max, left_max_sum + right_max_sum);
     MaxSubArrayResult result;
     result.start = left_max;
     result.end = right_max;
