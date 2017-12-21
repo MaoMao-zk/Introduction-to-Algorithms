@@ -29,11 +29,11 @@ void counting_sort(int* array, int size, int max_value)
     }
 // Sorting in book
 #else
-    //counting_array[i] will be the right position of i
+    // counting_array[i] will be the right position of i
     for (int i  = 1; i  < max_value; i++)
         counting_array[i] += counting_array[i-1];
 
-    //sorting
+    // sorting
     int* tmp_array = new int[size];
     for (int i  = size-1; i  >= 0; i--)
     {
@@ -41,7 +41,7 @@ void counting_sort(int* array, int size, int max_value)
         counting_array[array[i]]--;
     }
 
-    //copy to array
+    // copy to array
     for (int i  = 0; i  < size; i++)
         array[i] = tmp_array[i];
 #endif

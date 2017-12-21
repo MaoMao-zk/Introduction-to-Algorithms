@@ -91,7 +91,7 @@ bool young_tableau_insert(int** tableau, int m, int n, int& current_size, int a)
     int j = last_c;
     do
     {
-        //exchange current data with max data in left data and up data
+        // exchange current data with max data in left data and up data
         int exchange_r = i, exchange_c = j;
         // check left
         if (j > 0 && tableau[i][j-1] > tableau[i][j])
