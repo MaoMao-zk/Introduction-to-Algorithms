@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #include "MaxSubArray.h"
 #include <assert.h>
 #include <stdlib.h>
@@ -17,7 +19,7 @@ MaxSubArray::MaxSubArray()
 
 MaxSubArray::~MaxSubArray()
 {
-    if(m_array != NULL)
+    if (m_array != NULL)
     {
         delete []m_array;
         m_array = NULL;
@@ -27,21 +29,21 @@ MaxSubArray::~MaxSubArray()
 void MaxSubArray::m_BuildInput()
 {
     printf("Please input array size:\n");
-    
+
     std::cin >> m_size;
-    assert(m_size>0);
+    assert(m_size > 0);
 
     m_array = new int[m_size];
 
     srand(time(NULL));
-    for(int i=0;i<m_size;i++)
+    for (int i = 0; i < m_size; i++)
     {
         m_array[i] = rand()%(m_size*10) - m_size*5;
         printf("%d ", m_array[i]);
     }
-    std::cout<<endl;
+    std::cout << endl;
     /*
-    //Example in book
+    // Example in book
     static int array[16] = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
     m_size = 16;
     m_array = array;
@@ -57,7 +59,7 @@ bool MaxSubArray::m_CheckOutput()
 {
     printf("max subarray is :\n");
 
-    for(int i=m_result.start;i<=m_result.end;i++)
+    for (int i = m_result.start; i <= m_result.end; i++)
     {
         printf("%d ", m_array[i]);
     }
