@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #ifndef _INVERSION_H_
 #define _INVERSION_H_
 
@@ -5,17 +7,17 @@
 
 class Inversion : public Algorithms
 {
-public:
+ public:
     Inversion();
     virtual ~Inversion();
-protected:
+ protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
     virtual bool m_CheckOutput();
-private:
+ private:
     static long long merge_sort(int* array, int start, int end);
     static long long merge(int* array, int start, int middle, int end);
-private:
+ private:
     int m_size;
     int* m_array;
     long long m_count;

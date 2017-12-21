@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #include "Algorithms.h"
 #include <assert.h>
 #include <sys/time.h>
@@ -24,7 +26,7 @@ void Algorithms::Run()
     printf("Time used %llds %.3lfms\n", seconds, mile_seconds);
 
     bool result = m_CheckOutput();
-    if(result)
+    if (result)
         printf("Confratulations! PASS!\n");
     else
         printf("Sorry! FAIL!\n");

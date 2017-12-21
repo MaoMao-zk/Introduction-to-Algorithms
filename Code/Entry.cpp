@@ -1,7 +1,8 @@
-#include <iostream>
-#include "AlgorithmsList.hpp"
+// Copyright [2017] <MaoMao>
 
-using namespace std;
+#include <iostream>
+#include <vector>
+#include "AlgorithmsList.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -9,11 +10,11 @@ int main(int argc, char* argv[])
 
     vector<AlgorithmsInfo>* infos = algorithmsList.GetList();
 
-    if(infos->size() <= 0)
+    if (infos->size() <= 0)
         return -1;
 
     cout << "Index" << "\t"<< "ID" << "\t" << "Name" << endl;
-    for(unsigned int i=0;i<infos->size(); i++)
+    for (unsigned int i = 0; i < infos->size(); i++)
     {
         cout << i << "\t"<< infos->at(i).id << "\t" << infos->at(i).name << endl;
     }
@@ -22,7 +23,7 @@ int main(int argc, char* argv[])
 
     unsigned int index;
     cin >> index;
-    
+
     algorithmsList.RunAlgorithmsByIndex(index);
 
     return 0;

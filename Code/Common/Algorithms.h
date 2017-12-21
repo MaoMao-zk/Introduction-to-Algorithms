@@ -1,9 +1,9 @@
+// Copyright [2017] <MaoMao>
+
 #ifndef _ALGORITHMS_H_
 #define _ALGORITHMS_H_
 
 #include <string>
-
-using namespace std;
 
 struct AlgorithmsInfo
 {
@@ -13,15 +13,15 @@ struct AlgorithmsInfo
 
 class Algorithms
 {
-public:
-    virtual ~Algorithms(){}
+ public:
+    virtual ~Algorithms() {}
     AlgorithmsInfo& GetInfo();
     void Run();
-protected:
+ protected:
     virtual void m_BuildInput() = 0;
     virtual void m_Execute() = 0;
     virtual bool m_CheckOutput() = 0;
-protected:
+ protected:
     AlgorithmsInfo m_info;
 };
 

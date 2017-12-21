@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #include "Algorithms.h"
 #include <assert.h>
 #include <map>
@@ -15,7 +17,7 @@
 
 class AlgorithmsList
 {
-public:
+ public:
     AlgorithmsList()
     {
         m_AddAlorithms(new InsertionSort());
@@ -80,7 +82,7 @@ public:
         }
     }
 
-private:
+ private:
     void m_AddAlorithms(Algorithms* alg)
     {
         assert(alg != NULL);
@@ -89,7 +91,7 @@ private:
         m_map.insert(pair<string, Algorithms*>(alg->GetInfo().id, alg));
     }
 
-private:
+ private:
     vector<AlgorithmsInfo> m_list;
     map<string, Algorithms*> m_map;
 };
