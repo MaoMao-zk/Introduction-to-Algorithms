@@ -7,6 +7,8 @@
 #include <time.h>
 #include <iostream>
 
+using namespace std;
+
 extern void counting_sort(int* array, int size, int max_value);
 
 CountingSort::CountingSort()

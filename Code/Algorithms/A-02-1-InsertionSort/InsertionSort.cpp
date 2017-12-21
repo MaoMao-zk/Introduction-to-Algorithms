@@ -7,6 +7,8 @@
 #include <time.h>
 #include <iostream>
 
+using namespace std;
+
 extern void insertion_sort(int* array, int size);
 
 InsertionSort::InsertionSort()

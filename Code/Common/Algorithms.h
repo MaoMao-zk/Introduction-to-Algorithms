@@ -7,8 +7,8 @@
 
 struct AlgorithmsInfo
 {
-    string id;
-    string name;
+    std::string id;
+    std::string name;
 };
 
 class Algorithms

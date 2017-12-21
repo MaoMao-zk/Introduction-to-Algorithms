@@ -4,6 +4,8 @@
 #include <vector>
 #include "AlgorithmsList.hpp"
 
+using namespace std;
+
 int main(int argc, char* argv[])
 {
     AlgorithmsList algorithmsList;

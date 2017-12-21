@@ -5,6 +5,8 @@
 #include <map>
 #include <vector>
 
+using namespace std;
+
 #include "InsertionSort.h"
 #include "MergeSort.h"
 #include "Inversion.h"
