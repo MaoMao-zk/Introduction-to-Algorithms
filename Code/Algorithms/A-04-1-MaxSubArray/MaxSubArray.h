@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #ifndef _MAX_SUB_ARRAY_H_
 #define _MAX_SUB_ARRAY_H_
 
@@ -6,14 +8,14 @@
 
 class MaxSubArray : public Algorithms
 {
-public:
+ public:
     MaxSubArray();
     virtual ~MaxSubArray();
-protected:
+ protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
     virtual bool m_CheckOutput();
-private:
+ private:
     int m_size;
     int* m_array;
 

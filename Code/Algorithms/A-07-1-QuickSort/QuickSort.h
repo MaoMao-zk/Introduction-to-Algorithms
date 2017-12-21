@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #ifndef _QUICK_SORT_H_
 #define _QUICK_SORT_H_
 
@@ -5,14 +7,14 @@
 
 class QuickSort : public Algorithms
 {
-public:
+ public:
     QuickSort();
     virtual ~QuickSort();
-protected:
+ protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
     virtual bool m_CheckOutput();
-private:
+ private:
     int m_size;
     int* m_array;
 };

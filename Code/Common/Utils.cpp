@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #include "Utils.h"
 #include <stdio.h>
 
@@ -5,9 +7,9 @@ bool Utils::CheckArraySort(int* array, int size)
 {
     bool result = true;
 
-    for(int i=0;i<size-1;i++)
+    for (int i = 0; i < size-1; i++)
     {
-        if(array[i+1] < array[i])
+        if (array[i+1] < array[i])
         {
             result = false;
             break;
@@ -19,7 +21,7 @@ bool Utils::CheckArraySort(int* array, int size)
 
 void Utils::PrintArray(int* array, int size)
 {
-    for(int i=0;i<size;i++)
+    for (int i = 0; i < size; i++)
     {
         printf("%d ", array[i]);
     }

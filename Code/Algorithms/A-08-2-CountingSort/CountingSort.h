@@ -1,3 +1,5 @@
+// Copyright [2017] <MaoMao>
+
 #ifndef _COUNTING_SORT_H_
 #define _COUNTING_SORT_H_
 
@@ -5,14 +7,14 @@
 
 class CountingSort : public Algorithms
 {
-public:
+ public:
     CountingSort();
     virtual ~CountingSort();
-protected:
+ protected:
     virtual void m_BuildInput();
     virtual void m_Execute();
     virtual bool m_CheckOutput();
-private:
+ private:
     int m_size;
     int m_max_value;
     int* m_array;
