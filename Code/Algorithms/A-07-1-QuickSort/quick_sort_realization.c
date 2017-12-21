@@ -14,12 +14,12 @@ int partition(int* array, int start, int end)
         {
             i++;
             // exchange min value to i-area
-            Utils::Exchange(array[i], array[j]);
+            Utils::Exchange(&array[i], &array[j]);
         }
         j++;
     }
     // exchange end value to right place
-    Utils::Exchange(array[i+1], array[end]);
+    Utils::Exchange(&array[i+1], &array[end]);
     return i+1;
 }
 

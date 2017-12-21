@@ -1,8 +1,10 @@
 // Copyright [2017] <MaoMao>
 
-long long inversion_merge_count(int* array, int start, int middle, int end)
+#include <stdint.h>
+
+int64_t inversion_merge_count(int* array, int start, int middle, int end)
 {
-    long long count = 0;
+    int64_t count = 0;
     int ll = middle-start+2;
     int rl = end-middle+1;
     int* LA = new int[ll];
@@ -41,12 +43,12 @@ long long inversion_merge_count(int* array, int start, int middle, int end)
     return count;
 }
 
-long long inversion_count(int* array, int start, int end)
+int64_t inversion_count(int* array, int start, int end)
 {
     if (start < end)
     {
         int middle = start + ((end-start)/2);
-        long long count = 0;
+        int64_t count = 0;
         // Count left-half array
         count += inversion_count(array, start, middle);
         // Count right-half array

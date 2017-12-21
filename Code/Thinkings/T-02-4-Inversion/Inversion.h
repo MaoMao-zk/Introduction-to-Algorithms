@@ -4,6 +4,7 @@
 #define _INVERSION_H_
 
 #include "Algorithms.h"
+#include <stdint.h>
 
 class Inversion : public Algorithms
 {
@@ -15,12 +16,12 @@ class Inversion : public Algorithms
     virtual void m_Execute();
     virtual bool m_CheckOutput();
  private:
-    static long long merge_sort(int* array, int start, int end);
-    static long long merge(int* array, int start, int middle, int end);
+    static int64_t merge_sort(int* array, int start, int end);
+    static int64_t merge(int* array, int start, int middle, int end);
  private:
     int m_size;
     int* m_array;
-    long long m_count;
+    int64_t m_count;
 };
 
 #endif
