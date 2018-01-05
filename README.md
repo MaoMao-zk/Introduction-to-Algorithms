@@ -1,5 +1,18 @@
 # Introduction-of-Algorithms &middot;  ![Build Status](https://www.travis-ci.org/maomao9003/Introduction-of-Algorithms.svg?branch=master)
-Learning &lt;&lt;Introduction of Algorithms>>, and push Algorithms and Practices to server for management and sharing.
+Learning &lt;&lt;Introduction of Algorithms>>, and push Algorithms and Practices to server for management and sharing.  
+  
+网易有这门课程的[公开课](http://open.163.com/special/opencourse/algorithms.html)，是由本书的作者之一**Charles Leiserson**讲解的。  
+```
+Charles Leiserson讲到了一个有趣的问题
+1. 算法是一个性能相关的课题，在项目中，什么比性能更重要？
+    他和同学们列举了非常多的答案，可维护性，可扩展性，功能性，安全性，用户体验等等等等。
+2. 几乎所有的事情都比性能重要，那么为什么需要算法或者性能？
+    1> 算法能把不可能变成可能
+        通常性能的好坏，直接决定着可行还是不可行
+        算法总是处于解决问题的最前沿
+    2> 性能可以作为货币，去换取其他特性
+    3> 有趣
+```
 
 ## 目录
 ### 第一部分 基础知识
@@ -45,27 +58,4 @@ Learning &lt;&lt;Introduction of Algorithms>>, and push Algorithms and Practices
 1. NP 完全性
 1. 近似算法
 
-## Code
-Code include some realization of Algorithms, Practice and Thinking in Book.  
-If you have doubt about the realization of Algorithms, Practice and Thinking in Book, you can **referrence** it.  
-If you have done the realization, welcome to **Talk and Optimize** it.  
-If you want share your realization, welcome your **join**.
-
-### Environment
-* Windows
-    * [Cygwin](http://www.cygwin.com/) with make and g++
-* Unix/Linux
-    * make and g++
-
-### Build
-* Enter Code directory and execute `make`
-* Use `make clean` clean .o fils and binary  
-  
-![Build](.res/Build.PNG)
-
-### Run
-* Execute algorithms_test binary after build successed.
-* Select one algorithms/practice/thiking ro run.
-* Enter required input, check runing time and running result.  
-  
-![Run](.res/Run.PNG)
+## [Code](Code/README.md)
