@@ -2,6 +2,7 @@
 Learning &lt;&lt;Introduction of Algorithms>>, and push Algorithms and Practices to server for management and sharing.  
   
 网易有这门课程的[公开课](http://open.163.com/special/opencourse/algorithms.html)，是由本书的作者之一**Charles Leiserson**讲解的。  
+书中看不懂的可以参考此教程，或者系统的学习此教程。   
 ```
 Charles Leiserson讲到了一个有趣的问题
 1. 算法是一个性能相关的课题，在项目中，什么比性能更重要？
