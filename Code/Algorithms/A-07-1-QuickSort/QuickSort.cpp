@@ -53,7 +53,7 @@ void QuickSort::m_BuildInput()
 
 void QuickSort::m_Execute()
 {
-    if(m_use_randomized_quick_sort == 1)
+    if (m_use_randomized_quick_sort == 1)
         randomized_quick_sort(m_array, 0, m_size-1);
     else
         quick_sort(m_array, 0, m_size-1);

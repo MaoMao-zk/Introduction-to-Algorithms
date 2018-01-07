@@ -6,10 +6,10 @@
 
 int randomized_partition(int* array, int start, int end)
 {
-    //Chose a random data to end
-    int pos = start + ( rand() % (end - start) );
+    // Chose a random data to end
+    int pos = start + (rand() % (end - start));
     Utils::Exchange(&array[pos], &array[end]);
-    
+
     int x = array[end];
     int i = start -1;
     int j = start;
