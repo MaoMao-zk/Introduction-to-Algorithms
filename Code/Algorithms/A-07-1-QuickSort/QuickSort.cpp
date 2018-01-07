@@ -8,6 +8,7 @@
 #include <iostream>
 
 extern void quick_sort(int* array, int start, int end);
+extern void randomized_quick_sort(int* array, int start, int end);
 
 QuickSort::QuickSort()
 {
@@ -16,6 +17,7 @@ QuickSort::QuickSort()
 
     m_size = 0;
     m_array = NULL;
+    m_use_randomized_quick_sort = 0;
 }
 
 QuickSort::~QuickSort()
@@ -33,6 +35,10 @@ void QuickSort::m_BuildInput()
     std::cin >> m_size;
     assert(m_size > 0);
 
+    printf("Use randomized_quick_sort(1) or quick_sort(0)\n");
+    std::cin >> m_use_randomized_quick_sort;
+    assert(m_use_randomized_quick_sort == 0 || m_use_randomized_quick_sort == 1);
+
     m_array = new int[m_size];
 
     srand(time(NULL));
@@ -47,7 +53,10 @@ void QuickSort::m_BuildInput()
 
 void QuickSort::m_Execute()
 {
-    quick_sort(m_array, 0, m_size-1);
+    if(m_use_randomized_quick_sort == 1)
+        randomized_quick_sort(m_array, 0, m_size-1);
+    else
+        quick_sort(m_array, 0, m_size-1);
 }
 
 bool QuickSort::m_CheckOutput()
