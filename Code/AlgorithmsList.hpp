@@ -16,6 +16,7 @@ using namespace std;
 #include "YoungTableau.h"
 #include "QuickSort.h"
 #include "CountingSort.h"
+#include "RadixSort.h"
 
 class AlgorithmsList
 {
@@ -31,6 +32,7 @@ class AlgorithmsList
         m_AddAlorithms(new YoungTableau());
         m_AddAlorithms(new QuickSort());
         m_AddAlorithms(new CountingSort());
+        m_AddAlorithms(new RadixSort());
     }
 
     ~AlgorithmsList()
