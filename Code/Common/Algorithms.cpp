@@ -24,7 +24,7 @@ void Algorithms::Run()
     int64_t seconds = used_time / (1000*1000);
     used_time = used_time % (1000*1000);
     double mile_seconds = used_time / 1000.0;
-    printf("Time used %llds %.3lfms\n", seconds, mile_seconds);
+    printf("Time used %lds %.3lfms\n", seconds, mile_seconds);
 
     bool result = m_CheckOutput();
     if (result)
