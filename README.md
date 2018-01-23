@@ -26,7 +26,7 @@ Charles Leiserson讲到了一个有趣的问题
 6. [堆排序](Docs/Chapter/6.堆排序.md)
 1. [快速排序](Docs/Chapter/7.快速排序.md)
 1. [线性时间排序](Docs/Chapter/8.线性时间排序.md)
-1. 中位数和顺序统计量
+1. [中位数和顺序统计量](Docs/Chapter/9.中位数和顺序统计量.md)
 ### 第三部分 基础知识
 10. 基本数据结构
 1. 散列表
