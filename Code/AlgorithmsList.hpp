@@ -17,6 +17,7 @@ using namespace std;
 #include "QuickSort.h"
 #include "CountingSort.h"
 #include "RadixSort.h"
+#include "RandomizedSelect.h"
 
 class AlgorithmsList
 {
@@ -33,6 +34,7 @@ class AlgorithmsList
         m_AddAlorithms(new QuickSort());
         m_AddAlorithms(new CountingSort());
         m_AddAlorithms(new RadixSort());
+        m_AddAlorithms(new RandomizedSelect());
     }
 
     ~AlgorithmsList()
