@@ -14,11 +14,11 @@ If you want share your realization, welcome your **join**.
 * Enter Code directory and execute `make`
 * Use `make clean` clean .o fils and binary  
   
-![Build](.res/Build.PNG)
+![Build](/.res/Build.PNG)
 
 ### Run
 * Execute algorithms_test binary after build successed.
 * Select one algorithms/practice/thiking ro run.
 * Enter required input, check runing time and running result.  
   
-![Run](.res/Run.PNG)
+![Run](/.res/Run.PNG)
