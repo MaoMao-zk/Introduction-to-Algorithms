@@ -15,6 +15,14 @@ Charles Leiserson讲到了一个有趣的问题
     3> 有趣
 ```
 
+## Code
+[点击查看代码相关说明](Code/README.md)
+
+## Book
+
+英文版电子书：[Introduction_To_Algorithms-A3.pdf](http://ressources.unisciel.fr/algoprog/s00aaroot/aa00module1/res/%5BCormen-AL2011%5DIntroduction_To_Algorithms-A3.pdf)  
+英文版部分课后答案：[Intro_to_Algo_Selected_Solutions.pdf](https://mitpress.mit.edu/sites/default/files/titles/content/Intro_to_Algo_Selected_Solutions.pdf)
+
 ## 目录
 ### 第一部分 基础知识
 1. [算法在计算中的作用](Docs/Chapter/1.算法在计算中的作用.md)
@@ -58,5 +66,3 @@ Charles Leiserson讲到了一个有趣的问题
 1. 计算几何学
 1. NP 完全性
 1. 近似算法
-
-## [Code](Code/README.md)
