@@ -18,6 +18,7 @@ using namespace std;
 #include "CountingSort.h"
 #include "RadixSort.h"
 #include "RandomizedSelect.h"
+#include "DoublyLinkedListTest.h"
 
 class AlgorithmsList
 {
@@ -35,6 +36,7 @@ class AlgorithmsList
         m_AddAlorithms(new CountingSort());
         m_AddAlorithms(new RadixSort());
         m_AddAlorithms(new RandomizedSelect());
+        m_AddAlorithms(new DoublyLinkedListTest());
     }
 
     ~AlgorithmsList()
