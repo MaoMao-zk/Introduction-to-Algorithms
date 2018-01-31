@@ -20,6 +20,7 @@ class DoublyLinkedList : public ICollection<T>
     DoublyLinkedList()
     {
         head = nullptr;
+        size = 0;
     }
     virtual ~DoublyLinkedList() {}
  public:
@@ -39,6 +40,7 @@ class DoublyLinkedList : public ICollection<T>
         head = pElm;
         if (pElm->next != nullptr)
             pElm->next->prev = pElm;
+        size++;
     }
     virtual void Delete(Element<T>* elm)
     {
@@ -49,9 +51,11 @@ class DoublyLinkedList : public ICollection<T>
             head = pElm->next;
         if (pElm->next != nullptr)
             pElm->next->prev = pElm->prev;
+        size--;
     }
  public:
     DoublyLinkedElement<T>* head;
+    int size;
 };
 
 #endif

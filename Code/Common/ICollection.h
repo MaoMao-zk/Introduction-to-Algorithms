@@ -20,4 +20,18 @@ class ICollection
     virtual void Delete(Element<T>* elm) = 0;
 };
 
+template <class T>
+class IAdvancedCollection : public ICollection<T>
+{
+ public:
+    // Return null if empty
+    virtual Element<T>* Minimum() = 0;
+    // Return null if empty
+    virtual Element<T>* Maximum() = 0;
+    // Return null if elm is the biggest
+    virtual Element<T>* Successor(Element<T>* elm) = 0;
+    // Return null if elm is the smallest
+    virtual Element<T>* Predecessor(Element<T>* elm) = 0;
+};
+
 #endif

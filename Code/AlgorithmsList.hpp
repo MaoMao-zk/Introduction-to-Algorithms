@@ -19,6 +19,7 @@ using namespace std;
 #include "RadixSort.h"
 #include "RandomizedSelect.h"
 #include "DoublyLinkedListTest.h"
+#include "HashingTest.h"
 
 class AlgorithmsList
 {
@@ -37,17 +38,18 @@ class AlgorithmsList
         m_AddAlorithms(new RadixSort());
         m_AddAlorithms(new RandomizedSelect());
         m_AddAlorithms(new DoublyLinkedListTest());
+        m_AddAlorithms(new HashingTest());
     }
 
     ~AlgorithmsList()
     {
         m_list.clear();
 
-        for(map<string, Algorithms*>::iterator itor = m_map.begin();
-            itor!=m_map.end(); itor++)
+        for (map<string, Algorithms*>::iterator itor = m_map.begin();
+            itor != m_map.end(); itor++)
         {
             delete itor->second;
-            itor->second =NULL;
+            itor->second = NULL;
         }
         m_map.clear();
     }
@@ -56,10 +58,10 @@ class AlgorithmsList
     {
         return &m_list;
     }
-    
+
     bool RunAlgorithmsByIndex(unsigned int index)
     {
-        if(index < m_list.size())
+        if (index < m_list.size())
             return RunAlgorithmsByID(m_list[index].id);
         else
             return false;

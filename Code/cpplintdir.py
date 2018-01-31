@@ -19,5 +19,5 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print 'Please set the absolute path as the first parameter for parse.'
         sys.exit()
-    for path in all_files(sys.argv[1],'*.cpp;*.h;*.c'):
+    for path in all_files(sys.argv[1],'*.cpp;*.h;*.c;*.hpp'):
         os.system("python cpplint.py --quiet --linelength=120 --filter=-build/include,-build/namespaces,-whitespace/braces,-whitespace/newline,-runtime/threadsafe_fn,-build/header_guard %s"%(path))

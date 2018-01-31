@@ -24,6 +24,9 @@ bld/
 algorithms_test*
 *.o
 
+# Coredump file
+core
+
 
 # Visual Studio Code options directory
 .vscode/

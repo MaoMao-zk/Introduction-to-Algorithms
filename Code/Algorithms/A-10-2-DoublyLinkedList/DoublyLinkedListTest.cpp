@@ -47,7 +47,10 @@ void DoublyLinkedListTest::m_Execute()
                 if (elm == nullptr)
                     printf("Not found key=%d\n", key);
                 else
+                {
                     list.Delete(elm);
+                    delete elm;
+                }
                 break;
             }
             case 4:
