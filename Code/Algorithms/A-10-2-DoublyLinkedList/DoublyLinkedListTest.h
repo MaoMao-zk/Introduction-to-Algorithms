@@ -3,9 +3,9 @@
 #ifndef _I_DOUBLY_LINKED_LIST_TEST_H_
 #define _I_DOUBLY_LINKED_LIST_TEST_H_
 
-#include "Algorithms.h"
+#include "CollectionTest.h"
 
-class DoublyLinkedListTest : public Algorithms
+class DoublyLinkedListTest : public CollectionTest
 {
  public:
     DoublyLinkedListTest()
@@ -15,9 +15,9 @@ class DoublyLinkedListTest : public Algorithms
     }
     virtual ~DoublyLinkedListTest() {}
  protected:
-    virtual void m_BuildInput() {}
-    virtual void m_Execute();
-    virtual bool m_CheckOutput() {return true;}
+    virtual ICollection<int>* CreatCollection();
+    virtual Element<int>* CreatElement();
+    virtual void Print();
 };
 
 #endif

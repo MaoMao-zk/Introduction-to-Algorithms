@@ -3,10 +3,9 @@
 #ifndef _I_HASHING_TEST_H_
 #define _I_HASHING_TEST_H_
 
-#include "Algorithms.h"
-#include "Hashing.hpp"
+#include "CollectionTest.h"
 
-class HashingTest : public Algorithms
+class HashingTest : public CollectionTest
 {
  public:
     HashingTest()
@@ -16,11 +15,9 @@ class HashingTest : public Algorithms
     }
     virtual ~HashingTest() {}
  protected:
-    virtual void m_BuildInput();
-    virtual void m_Execute();
-    virtual bool m_CheckOutput() {return true;}
- private:
-    Hashing<int> * hash;
+    virtual ICollection<int>* CreatCollection();
+    virtual Element<int>* CreatElement();
+    virtual void Print();
 };
 
 #endif

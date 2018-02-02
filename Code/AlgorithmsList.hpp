@@ -20,6 +20,7 @@ using namespace std;
 #include "RandomizedSelect.h"
 #include "DoublyLinkedListTest.h"
 #include "HashingTest.h"
+#include "BinarySearchTreeTest.h"
 
 class AlgorithmsList
 {
@@ -39,6 +40,7 @@ class AlgorithmsList
         m_AddAlorithms(new RandomizedSelect());
         m_AddAlorithms(new DoublyLinkedListTest());
         m_AddAlorithms(new HashingTest());
+        m_AddAlorithms(new BinarySearchTreeTest());
     }
 
     ~AlgorithmsList()

@@ -16,7 +16,7 @@ class Algorithms
  public:
     virtual ~Algorithms() {}
     AlgorithmsInfo& GetInfo();
-    void Run();
+    virtual void Run();
  protected:
     virtual void m_BuildInput() = 0;
     virtual void m_Execute() = 0;
