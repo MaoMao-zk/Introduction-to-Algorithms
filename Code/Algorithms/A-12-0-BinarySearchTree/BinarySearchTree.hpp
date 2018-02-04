@@ -14,6 +14,7 @@ class BinarySearchTree : public IAdvancedCollection<T>
  public:
     BinarySearchTree()
     {
+        root = nullptr;
     }
     virtual ~BinarySearchTree()
     {
