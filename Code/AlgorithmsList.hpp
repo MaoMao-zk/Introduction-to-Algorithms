@@ -21,6 +21,7 @@ using namespace std;
 #include "DoublyLinkedListTest.h"
 #include "HashingTest.h"
 #include "BinarySearchTreeTest.h"
+#include "RedBlackTreeTest.h"
 
 class AlgorithmsList
 {
@@ -41,6 +42,7 @@ class AlgorithmsList
         m_AddAlorithms(new DoublyLinkedListTest());
         m_AddAlorithms(new HashingTest());
         m_AddAlorithms(new BinarySearchTreeTest());
+        m_AddAlorithms(new RedBlackTreeTest());
     }
 
     ~AlgorithmsList()

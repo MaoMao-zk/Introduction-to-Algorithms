@@ -38,6 +38,7 @@ class RedBlackTree : public IAdvancedCollection<T>
     {
         nil = new RedBlackTreeNode<T>();
         nil->color = BLACK;
+        root = nil;
     }
     virtual ~RedBlackTree()
     {
@@ -187,7 +188,7 @@ class RedBlackTree : public IAdvancedCollection<T>
         // x->p go to y->p
         y->p = x->p;
         if (x->p == nil)
-            root = static_cast<RedBlackTreeNode<T>*>(y);
+            root = y;
         else if(x == x->p->left)
             x->p->left = y;
         else
@@ -205,7 +206,7 @@ class RedBlackTree : public IAdvancedCollection<T>
         // y->p go to x->p
         x->p = y->p;
         if (y->p == nil)
-            root = y;
+            root = x;
         else if(y == y->p->left)
             y->p->left = x;
         else
