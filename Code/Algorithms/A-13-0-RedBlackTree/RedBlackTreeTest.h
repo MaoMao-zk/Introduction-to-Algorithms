@@ -4,7 +4,7 @@
 #define _I_RED_BLACK_TREE_TEST_H_
 
 #include "AdvancedCollectionTest.h"
-#include "RedBlackTree.hpp"
+#include "RedBlackTree.h"
 
 class RedBlackTreeTest : public AdvancedCollectionTest
 {
@@ -16,8 +16,8 @@ class RedBlackTreeTest : public AdvancedCollectionTest
     }
     virtual ~RedBlackTreeTest() {}
  protected:
-    virtual ICollection<int>* CreatCollection();
-    virtual Element<int>* CreatElement();
+    virtual ICollection* CreatCollection();
+    virtual Element* CreatElement();
     virtual void Print();
 };
 

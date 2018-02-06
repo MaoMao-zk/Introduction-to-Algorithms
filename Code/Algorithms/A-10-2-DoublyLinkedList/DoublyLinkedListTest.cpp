@@ -1,24 +1,24 @@
 // Copyright [2017] <MaoMao>
 
 #include "DoublyLinkedListTest.h"
-#include "DoublyLinkedList.hpp"
+#include "DoublyLinkedList.h"
 #include <iostream>
 
-ICollection<int>* DoublyLinkedListTest::CreatCollection()
+ICollection* DoublyLinkedListTest::CreatCollection()
 {
-    return new DoublyLinkedList<int>();
+    return new DoublyLinkedList();
 }
-Element<int>* DoublyLinkedListTest::CreatElement()
+Element* DoublyLinkedListTest::CreatElement()
 {
-    return new DoublyLinkedElement<int>();
+    return new DoublyLinkedElement();
 }
 void DoublyLinkedListTest::Print()
 {
-    DoublyLinkedList<int>* list = static_cast<DoublyLinkedList<int>*>(m_pCollection);
-    DoublyLinkedElement<int>* p = list->head;
+    DoublyLinkedList* list = static_cast<DoublyLinkedList*>(m_pCollection);
+    DoublyLinkedElement* p = list->head;
     while (p != nullptr)
     {
-        printf("[%d,%d] ", p->key, p->data);
+        printf("%d, ", p->key);
         p = p->next;
     }
     printf("\n");

@@ -28,18 +28,18 @@ void CollectionTest::m_Execute()
                 printf("Input key to search :\n");
                 int key;
                 std::cin >> key;
-                Element<int>* elm = m_pCollection->Search(key);
+                Element* elm = m_pCollection->Search(key);
                 if (elm == nullptr)
                     printf("Not found key=%d\n", key);
                 else
-                    printf("Found key=%d, data=%d\n", key, elm->data);
+                    printf("Found key=%d\n", key);
                 break;
             }
             case 2:
             {
-                printf("Input key & data to insert :\n");
-                Element<int>* elm = CreatElement();
-                std::cin >> elm->key >> elm->data;
+                printf("Input key to insert :\n");
+                Element* elm = CreatElement();
+                std::cin >> elm->key;
                 m_pCollection->Insert(elm);
                 break;
             }
@@ -48,7 +48,7 @@ void CollectionTest::m_Execute()
                 printf("Input key to delete :\n");
                 int key;
                 std::cin >> key;
-                Element<int>* elm = m_pCollection->Search(key);
+                Element* elm = m_pCollection->Search(key);
                 if (elm == nullptr)
                     printf("Not found key=%d\n", key);
                 else

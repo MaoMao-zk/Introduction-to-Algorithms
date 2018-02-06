@@ -6,7 +6,7 @@
 
 void AdvancedCollectionTest::m_Execute()
 {
-    IAdvancedCollection<int>* pCollection = static_cast<IAdvancedCollection<int>*>(m_pCollection);
+    IAdvancedCollection* pCollection = static_cast<IAdvancedCollection*>(m_pCollection);
     int choice = -1;
     do
     {
@@ -27,18 +27,18 @@ void AdvancedCollectionTest::m_Execute()
                 printf("Input key to search :\n");
                 int key;
                 std::cin >> key;
-                Element<int>* elm = pCollection->Search(key);
+                Element* elm = pCollection->Search(key);
                 if (elm == nullptr)
                     printf("Not found key=%d\n", key);
                 else
-                    printf("Found key=%d, data=%d\n", key, elm->data);
+                    printf("Found key=%d\n", key);
                 break;
             }
             case 2:
             {
-                printf("Input key & data to insert :\n");
-                Element<int>* elm = CreatElement();
-                std::cin >> elm->key >> elm->data;
+                printf("Input key to insert :\n");
+                Element* elm = CreatElement();
+                std::cin >> elm->key;
                 pCollection->Insert(elm);
                 Print();
                 break;
@@ -48,7 +48,7 @@ void AdvancedCollectionTest::m_Execute()
                 printf("Input key to delete :\n");
                 int key;
                 std::cin >> key;
-                Element<int>* elm = pCollection->Search(key);
+                Element* elm = pCollection->Search(key);
                 if (elm == nullptr)
                     printf("Not found key=%d\n", key);
                 else
@@ -61,7 +61,7 @@ void AdvancedCollectionTest::m_Execute()
             }
             case 4:
             {
-                Element<int>* elm = pCollection->Minimum();
+                Element* elm = pCollection->Minimum();
                 if (elm != nullptr)
                     printf("Minimum key=%d\n", elm->key);
                 else
@@ -70,7 +70,7 @@ void AdvancedCollectionTest::m_Execute()
             }
             case 5:
             {
-                Element<int>* elm = pCollection->Maximum();
+                Element* elm = pCollection->Maximum();
                 if (elm != nullptr)
                     printf("Maximum key=%d\n", elm->key);
                 else
@@ -82,12 +82,12 @@ void AdvancedCollectionTest::m_Execute()
                 printf("Input key to find it's Successor :\n");
                 int key;
                 std::cin >> key;
-                Element<int>* elm = pCollection->Search(key);
+                Element* elm = pCollection->Search(key);
                 if (elm == nullptr)
                     printf("Not found key=%d\n", key);
                 else
                 {
-                    Element<int>* successor = pCollection->Successor(elm);
+                    Element* successor = pCollection->Successor(elm);
                     if (successor != nullptr)
                         printf("Successor of %d is %d\n", key, successor->key);
                     else
@@ -100,12 +100,12 @@ void AdvancedCollectionTest::m_Execute()
                 printf("Input key to find it's Predecessor :\n");
                 int key;
                 std::cin >> key;
-                Element<int>* elm = pCollection->Search(key);
+                Element* elm = pCollection->Search(key);
                 if (elm == nullptr)
                     printf("Not found key=%d\n", key);
                 else
                 {
-                    Element<int>* predecessor = pCollection->Predecessor(elm);
+                    Element* predecessor = pCollection->Predecessor(elm);
                     if (predecessor != nullptr)
                         printf("Predecessor of %d is %d\n", key, predecessor->key);
                     else

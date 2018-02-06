@@ -15,11 +15,11 @@ class CollectionTest : public Algorithms
     virtual void m_Execute();
     virtual bool m_CheckOutput();
  protected:
-    virtual ICollection<int>* CreatCollection() = 0;
-    virtual Element<int>* CreatElement() = 0;
+    virtual ICollection* CreatCollection() = 0;
+    virtual Element* CreatElement() = 0;
     virtual void Print() = 0;
  protected:
-    ICollection<int>* m_pCollection;
+    ICollection* m_pCollection;
 };
 
 #endif

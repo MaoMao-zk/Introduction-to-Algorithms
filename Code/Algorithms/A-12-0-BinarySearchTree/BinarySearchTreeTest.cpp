@@ -1,26 +1,26 @@
 // Copyright [2017] <MaoMao>
 
 #include "BinarySearchTreeTest.h"
-#include "BinarySearchTree.hpp"
+#include "BinarySearchTree.h"
 
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
 
-ICollection<int>* BinarySearchTreeTest::CreatCollection()
+ICollection* BinarySearchTreeTest::CreatCollection()
 {
-    return new BinarySearchTree<int>();
+    return new BinarySearchTree();
 }
 
-Element<int>* BinarySearchTreeTest::CreatElement()
+Element* BinarySearchTreeTest::CreatElement()
 {
-    return new BinaryTreeNode<int>();
+    return new BinaryTreeNode();
 }
 
 void BinarySearchTreeTest::Print()
 {
-    BinarySearchTree<int>* p = static_cast<BinarySearchTree<int>*>(m_pCollection);
-    Element<int>* node = p->Minimum();
+    BinarySearchTree* p = static_cast<BinarySearchTree*>(m_pCollection);
+    Element* node = p->Minimum();
     while (node != nullptr)
     {
         printf("%d ", node->key);

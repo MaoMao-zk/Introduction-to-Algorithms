@@ -1,14 +1,14 @@
 // Copyright [2017] <MaoMao>
 
 #include "HashingTest.h"
-#include "Hashing.hpp"
-#include "../A-10-2-DoublyLinkedList/DoublyLinkedList.hpp"
+#include "Hashing.h"
+#include "../A-10-2-DoublyLinkedList/DoublyLinkedList.h"
 
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
 
-ICollection<int>* HashingTest::CreatCollection()
+ICollection* HashingTest::CreatCollection()
 {
     std::cout << "Chose the hash method(Default is 1):\n"
               << "[1] Division Hash Method \n"
@@ -22,7 +22,7 @@ ICollection<int>* HashingTest::CreatCollection()
         std::cout << "Please input r a w(input 0 as default):\n"
                   << "\th(k) = [(a · k) mod 2^w] >> (w − r)\n";
         std::cin >> r >> a >> w;
-        return new MultiplicationHashing<int>(r, a, w);
+        return new MultiplicationHashing(r, a, w);
     }
     else
     {
@@ -30,25 +30,25 @@ ICollection<int>* HashingTest::CreatCollection()
         std::cout << "Please input m:\n"
                   << "\th(k) = k mod m\n";
         std::cin >> m;
-        return new DivisionHashing<int>(m);
+        return new DivisionHashing(m);
     }
 }
 
-Element<int>* HashingTest::CreatElement()
+Element* HashingTest::CreatElement()
 {
-    return new DoublyLinkedElement<int>();
+    return new DoublyLinkedElement();
 }
 
 void HashingTest::Print()
 {
-    Hashing<int>* hash = static_cast<Hashing<int>*>(m_pCollection);
+    Hashing* hash = static_cast<Hashing*>(m_pCollection);
     for (int i = 0; i < hash->table_size; i++)
     {
         printf("list_size:%d ... ", hash->table[i].size);
-        DoublyLinkedElement<int>* p = hash->table[i].head;
+        DoublyLinkedElement* p = hash->table[i].head;
         while (p != nullptr)
         {
-            printf("[%d,%d] ", p->key, p->data);
+            printf("%d, ", p->key);
             p = p->next;
         }
         printf("\n");
@@ -65,7 +65,7 @@ void HashingTest::m_BuildInput()
     srand(time(NULL));
     for (int i = 0; i < size; i++)
     {
-        DoublyLinkedElement<int>* elm = new DoublyLinkedElement<int>();
+        DoublyLinkedElement* elm = new DoublyLinkedElement();
         elm->key = rand();
         elm->data = rand();
         if (elm->key < 0)

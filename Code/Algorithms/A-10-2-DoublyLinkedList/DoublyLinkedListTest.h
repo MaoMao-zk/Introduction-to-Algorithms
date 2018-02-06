@@ -15,8 +15,8 @@ class DoublyLinkedListTest : public CollectionTest
     }
     virtual ~DoublyLinkedListTest() {}
  protected:
-    virtual ICollection<int>* CreatCollection();
-    virtual Element<int>* CreatElement();
+    virtual ICollection* CreatCollection();
+    virtual Element* CreatElement();
     virtual void Print();
 };
 

@@ -4,7 +4,7 @@
 #define _I_BINARY_SEARCH_TREE_TEST_H_
 
 #include "AdvancedCollectionTest.h"
-#include "BinarySearchTree.hpp"
+#include "BinarySearchTree.h"
 
 class BinarySearchTreeTest : public AdvancedCollectionTest
 {
@@ -16,8 +16,8 @@ class BinarySearchTreeTest : public AdvancedCollectionTest
     }
     virtual ~BinarySearchTreeTest() {}
  protected:
-    virtual ICollection<int>* CreatCollection();
-    virtual Element<int>* CreatElement();
+    virtual ICollection* CreatCollection();
+    virtual Element* CreatElement();
     virtual void Print();
 };
 
