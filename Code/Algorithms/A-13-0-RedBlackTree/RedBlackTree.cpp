@@ -6,6 +6,9 @@ RedBlackTree::RedBlackTree()
 {
     nil = new RedBlackTreeNode();
     nil->color = BLACK;
+    nil->left = nullptr;
+    nil->right = nullptr;
+    nil->p = nullptr;
     root = nil;
 }
 
