@@ -167,7 +167,8 @@ void RedBlackTree::LeftRotate(RedBlackTreeNode* x)
     RedBlackTreeNode* y = x->right;
     // y->left go to x->right
     x->right = y->left;
-    x->right->p = x;
+    if (y->left != nil)
+        x->right->p = x;
     // x->p go to y->p
     y->p = x->p;
     if (x->p == nil)
@@ -186,7 +187,8 @@ void RedBlackTree::RightRotate(RedBlackTreeNode* y)
     RedBlackTreeNode* x = y->left;
     // x->right go to y->left
     y->left = x->right;
-    y->left->p = y;
+    if (x->right != nil)
+        x->right->p = y;
     // y->p go to x->p
     x->p = y->p;
     if (y->p == nil)

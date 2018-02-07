@@ -35,10 +35,10 @@ class BinarySearchTree : public IAdvancedCollection
     virtual Element* Maximum();
     virtual Element* Successor(Element* elm);
     virtual Element* Predecessor(Element* elm);
- private:
-    BinaryTreeNode* MinimumSubTree(BinaryTreeNode* r);
-    Element* MaximumSubTree(BinaryTreeNode* r);
-    void Transplant(BinaryTreeNode* from, BinaryTreeNode* to);
+ protected:
+    virtual BinaryTreeNode* MinimumSubTree(BinaryTreeNode* r);
+    virtual Element* MaximumSubTree(BinaryTreeNode* r);
+    virtual void Transplant(BinaryTreeNode* from, BinaryTreeNode* to);
  public:
     BinaryTreeNode* root;
 };
