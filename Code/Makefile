@@ -9,7 +9,7 @@ SUB_DIR=$(filter-out .,$(shell find . -type d))
 ###compile flag###
 INC_DIR=$(patsubst %,-I%,$(SUB_DIR))
 COMMON_INC=$(shell ls Common/*.h 2>/dev/null)
-CFLAGS=-ICommon -Wall -std=c++11 -g
+CFLAGS=-ICommon -Wall -std=c++11 -O2 -g
 
 ###src file###
 SRC_FILE=$(foreach dir,$(SUB_DIR),$(shell ls $(dir)/*.cpp 2>/dev/null))

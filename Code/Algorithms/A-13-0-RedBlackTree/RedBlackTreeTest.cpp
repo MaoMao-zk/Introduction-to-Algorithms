@@ -229,6 +229,11 @@ bool RedBlackTreeTest::DFSCheck(RedBlackTree* tree, RedBlackTreeNode* node, int 
     }
     if (node->color == BLACK)
         currentBH++;
+    else if (node->left->color == RED || node->right->color == RED)
+    {
+        fprintf(stderr, "node(%d) is RED, node->left->color = %d, node->right->color = %d.\n", node->key, node->left->color, node->right->color);
+        return false;
+    }
     if (!DFSCheck(tree, node->left, currentBH, bhForCheck))
         return false;
     if (!DFSCheck(tree, node->right, currentBH, bhForCheck))
