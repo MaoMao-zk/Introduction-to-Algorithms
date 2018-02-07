@@ -40,7 +40,7 @@ void AdvancedCollectionTest::m_Execute()
                 Element* elm = CreatElement();
                 std::cin >> elm->key;
                 pCollection->Insert(elm);
-                Print();
+                //Print();
                 break;
             }
             case 3:
@@ -56,7 +56,7 @@ void AdvancedCollectionTest::m_Execute()
                     pCollection->Delete(elm);
                     delete elm;
                 }
-                Print();
+                //Print();
                 break;
             }
             case 4:

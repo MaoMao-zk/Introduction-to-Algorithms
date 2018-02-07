@@ -27,6 +27,8 @@ Element* RedBlackTree::Search(int key)
         else if (key > p->key)
             p = p->right;
     }
+    if (p == nil)
+        return nullptr;
     return p;
 }
 
