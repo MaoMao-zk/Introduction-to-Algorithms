@@ -81,7 +81,12 @@ static void printLeaves(int indentSpace, int level, int nodesInThisLevel, const 
     if ((*iter) == nil)
         out << ((i == 0) ? setw(indentSpace+2) : setw(2*level+2)) << "";
     else
-        out << ((i == 0) ? setw(indentSpace+2+strlen("\033[31m")-intToString((*iter)->key).length()) : setw(2*level+2+strlen("\033[31m")-intToString((*iter)->key).length())) << "\033[31m" << intToString((*iter)->key) << "\033[0m";
+    {
+        if ((*iter)->color == BLACK)
+            out << ((i == 0) ? setw(indentSpace+2) : setw(2*level+2)) << intToString((*iter)->key);
+        else
+            out << ((i == 0) ? setw(indentSpace+2+strlen("\033[31m")-intToString((*iter)->key).length()) : setw(2*level+2+strlen("\033[31m")-intToString((*iter)->key).length())) << "\033[31m" << intToString((*iter)->key) << "\033[0m";
+    }
   }
   out << endl;
 }
@@ -168,4 +173,65 @@ void RedBlackTreeTest::Print()
         }
         printf("\n");
     }*/
+}
+
+bool RedBlackTreeTest::m_CheckOutput()
+{
+    RedBlackTree* p = static_cast<RedBlackTree*>(m_pCollection);
+    Element* current = p->Minimum();
+    Element* next = p->nil;
+    while (current != p->nil)
+    {
+        next = p->Successor(current);
+        if (next != p->nil && next->key < current->key)
+        {
+            fprintf(stderr, "next->key(%d) < current->key(%d)\n", next->key, current->key);
+            return false;
+        }
+        current = next;
+    }
+
+    if (p->root != p->nil)
+    {
+        // root color should be black
+        if (p->root->color != BLACK)
+        {
+            fprintf(stderr, "p->root->key(%d) color is not BLACK.\n", p->root->key);
+            return false;
+        }
+
+        // Get left black height
+        RedBlackTreeNode* current = p->root;
+        int leftBH = 0;
+        while (current != p->nil)
+        {
+            if (current->color == BLACK)
+                leftBH++;
+            current = current->left;
+        }
+        return DFSCheck(p, p->root, 0, leftBH);
+    }
+    return true;
+}
+
+bool RedBlackTreeTest::DFSCheck(RedBlackTree* tree, RedBlackTreeNode* node, int currentBH, int bhForCheck)
+{
+    // leave node
+    if (node == tree->nil)
+    {
+        if (currentBH != bhForCheck)
+        {
+            fprintf(stderr, "currentBH(%d) != bhForCheck(%d).\n", currentBH, bhForCheck);
+            return false;
+        }
+        else
+            return true;
+    }
+    if (node->color == BLACK)
+        currentBH++;
+    if (!DFSCheck(tree, node->left, currentBH, bhForCheck))
+        return false;
+    if (!DFSCheck(tree, node->right, currentBH, bhForCheck))
+        return false;
+    return true;
 }

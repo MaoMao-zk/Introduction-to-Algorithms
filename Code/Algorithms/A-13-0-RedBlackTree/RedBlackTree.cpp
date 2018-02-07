@@ -1,6 +1,7 @@
 // Copyright [2017] <MaoMao>
 
 #include "RedBlackTree.h"
+#include <stdio.h>
 
 RedBlackTree::RedBlackTree()
 {

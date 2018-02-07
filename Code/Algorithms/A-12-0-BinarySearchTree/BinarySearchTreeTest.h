@@ -19,6 +19,7 @@ class BinarySearchTreeTest : public AdvancedCollectionTest
     virtual ICollection* CreatCollection();
     virtual Element* CreatElement();
     virtual void Print();
+    virtual bool m_CheckOutput();
 };
 
 #endif

@@ -122,3 +122,40 @@ void BinarySearchTreeTest::Print()
     }
     printf("\n");*/
 }
+
+bool BinarySearchTreeTest::m_CheckOutput()
+{
+    if (!AdvancedCollectionTest::m_CheckOutput())
+        return false;
+
+    BinarySearchTree* p = static_cast<BinarySearchTree*>(m_pCollection);
+    deque<BinaryTreeNode*> nodesQueue;
+    if (p->root != nullptr)
+    {
+        nodesQueue.push_back(p->root);
+        while (!nodesQueue.empty())
+        {
+            BinaryTreeNode* node = nodesQueue.front();
+            if (node->left != nullptr)
+            {
+                if (node->left->key > node->key)
+                {
+                    fprintf(stderr, "node->left->key(%d) > node->key(%d)\n", node->left->key, node->key);
+                    return false;
+                }
+                nodesQueue.push_back(node->left);
+            }
+            if (node->right != nullptr)
+            {
+                if (node->right->key < node->key)
+                {
+                    fprintf(stderr, "node->right->key(%d) < node->key(%d)\n", node->right->key, node->key);
+                    return false;
+                }
+                nodesQueue.push_back(node->right);
+            }
+            nodesQueue.pop_front();
+        }
+    }
+    return true;
+}

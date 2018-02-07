@@ -11,6 +11,7 @@ class AdvancedCollectionTest : public CollectionTest
     virtual ~AdvancedCollectionTest() {}
  protected:
     virtual void m_Execute();
+    virtual bool m_CheckOutput();
 };
 
 #endif

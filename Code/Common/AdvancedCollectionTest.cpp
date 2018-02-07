@@ -40,7 +40,6 @@ void AdvancedCollectionTest::m_Execute()
                 Element* elm = CreatElement();
                 std::cin >> elm->key;
                 pCollection->Insert(elm);
-                //Print();
                 break;
             }
             case 3:
@@ -56,7 +55,6 @@ void AdvancedCollectionTest::m_Execute()
                     pCollection->Delete(elm);
                     delete elm;
                 }
-                //Print();
                 break;
             }
             case 4:
@@ -120,4 +118,22 @@ void AdvancedCollectionTest::m_Execute()
             }
         }
     }while(choice > 0);
+}
+
+bool AdvancedCollectionTest::m_CheckOutput()
+{
+    IAdvancedCollection* pCollection = static_cast<IAdvancedCollection*>(m_pCollection);
+    Element* current = pCollection->Minimum();
+    Element* next = nullptr;
+    while (current != nullptr)
+    {
+        next = pCollection->Successor(current);
+        if (next != nullptr && next->key < current->key)
+        {
+            fprintf(stderr, "next->key(%d) < current->key(%d)\n", next->key, current->key);
+            return false;
+        }
+        current = next;
+    }
+    return true;
 }

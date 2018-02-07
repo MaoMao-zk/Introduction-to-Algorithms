@@ -19,6 +19,9 @@ class RedBlackTreeTest : public AdvancedCollectionTest
     virtual ICollection* CreatCollection();
     virtual Element* CreatElement();
     virtual void Print();
+    virtual bool m_CheckOutput();
+ private:
+    bool DFSCheck(RedBlackTree* tree, RedBlackTreeNode* node, int currentBH, int bhForCheck);
 };
 
 #endif
