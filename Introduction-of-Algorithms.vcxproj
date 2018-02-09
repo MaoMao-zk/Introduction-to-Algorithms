@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{94D1E883-7FF3-4158-AB4E-7BC68F39EDDC}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemoteBuildCommandLine>cd Code%3bmake</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>cd Code%3bmake clean%3bmake</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>cd Code%3bmake clean</RemoteCleanCommandLine>
+    <RemoteBuildOutputs>$(RemoteRootDir)/$(ProjectName)/Code/algorithms_test</RemoteBuildOutputs>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemoteBuildCommandLine>cd Code%3bmake</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>cd Code%3bmake clean%3bmake</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>cd Code%3bmake clean</RemoteCleanCommandLine>
+    <RemoteBuildOutputs>$(RemoteRootDir)/$(ProjectName)/Code/algorithms_test</RemoteBuildOutputs>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <BuildCommandLine>
+    </BuildCommandLine>
+    <ReBuildCommandLine>
+    </ReBuildCommandLine>
+    <CleanCommandLine>
+    </CleanCommandLine>
+    <RemoteBuildCommandLine>make</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>make clean;make</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
+    <RemoteBuildOutputs>algorithms_test</RemoteBuildOutputs>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="code\algorithms\a-02-1-insertionsort\InsertionSort.cpp" />
+    <ClCompile Include="code\algorithms\a-02-1-insertionsort\insertion_sort_realization.c" />
+    <ClCompile Include="code\algorithms\a-02-3-mergesort\MergeSort.cpp" />
+    <ClCompile Include="code\algorithms\a-02-3-mergesort\merge_sort_realization.c" />
+    <ClCompile Include="code\algorithms\a-04-1-maxsubarray\MaxSubArray.cpp" />
+    <ClCompile Include="code\algorithms\a-04-1-maxsubarray\max_subarray_realization.c" />
+    <ClCompile Include="code\algorithms\a-04-2-matrixmultiply\MatrixMultiply.cpp" />
+    <ClCompile Include="code\algorithms\a-04-2-matrixmultiply\matrix_multiply_realization.c" />
+    <ClCompile Include="code\algorithms\a-06-4-heapsort\HeapSort.cpp" />
+    <ClCompile Include="code\algorithms\a-06-4-heapsort\heap_sort_realization.c" />
+    <ClCompile Include="code\algorithms\a-07-1-quicksort\QuickSort.cpp" />
+    <ClCompile Include="code\algorithms\a-07-1-quicksort\quick_sort_realization.c" />
+    <ClCompile Include="code\algorithms\a-07-1-quicksort\randomized_quick_sort_realization.c" />
+    <ClCompile Include="code\algorithms\a-08-2-countingsort\CountingSort.cpp" />
+    <ClCompile Include="code\algorithms\a-08-2-countingsort\counting_sort_realization.c" />
+    <ClCompile Include="code\algorithms\a-08-3-radixsort\RadixSort.cpp" />
+    <ClCompile Include="code\algorithms\a-08-3-radixsort\radix_sort_realization.c" />
+    <ClCompile Include="code\algorithms\a-09-2-randomizedselect\RandomizedSelect.cpp" />
+    <ClCompile Include="code\algorithms\a-09-2-randomizedselect\randomized_select_realization.c" />
+    <ClCompile Include="code\algorithms\a-10-2-doublylinkedlist\DoublyLinkedList.cpp" />
+    <ClCompile Include="code\algorithms\a-10-2-doublylinkedlist\DoublyLinkedListTest.cpp" />
+    <ClCompile Include="code\algorithms\a-11-3-hashing\Hashing.cpp" />
+    <ClCompile Include="code\algorithms\a-11-3-hashing\HashingTest.cpp" />
+    <ClCompile Include="code\algorithms\a-12-0-binarysearchtree\BinarySearchTree.cpp" />
+    <ClCompile Include="code\algorithms\a-12-0-binarysearchtree\BinarySearchTreeTest.cpp" />
+    <ClCompile Include="code\algorithms\a-13-0-redblacktree\RedBlackTree.cpp" />
+    <ClCompile Include="code\algorithms\a-13-0-redblacktree\RedBlackTreeTest.cpp" />
+    <ClCompile Include="code\common\AdvancedCollectionTest.cpp" />
+    <ClCompile Include="code\common\Algorithms.cpp" />
+    <ClCompile Include="code\common\CollectionTest.cpp" />
+    <ClCompile Include="code\common\Utils.cpp" />
+    <ClCompile Include="code\Entry.cpp" />
+    <ClCompile Include="code\thinkings\t-02-4-inversion\Inversion.cpp" />
+    <ClCompile Include="code\thinkings\t-02-4-inversion\inversion_realization.c" />
+    <ClCompile Include="code\thinkings\t-06-3-youngtableau\YoungTableau.cpp" />
+    <ClCompile Include="code\thinkings\t-06-3-youngtableau\young_tableau_realization.c" />
+    <ClCompile Include="code\thinkings\t-13-3-avltree\AVLTree.cpp" />
+    <ClCompile Include="code\thinkings\t-13-3-avltree\AVLTreeTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\AlgorithmsList.hpp" />
+    <ClInclude Include="code\algorithms\a-02-1-insertionsort\InsertionSort.h" />
+    <ClInclude Include="code\algorithms\a-02-3-mergesort\MergeSort.h" />
+    <ClInclude Include="code\algorithms\a-04-1-maxsubarray\MaxSubArray.h" />
+    <ClInclude Include="code\algorithms\a-04-1-maxsubarray\max_subarray_realization.h" />
+    <ClInclude Include="code\algorithms\a-04-2-matrixmultiply\MatrixMultiply.h" />
+    <ClInclude Include="code\algorithms\a-06-4-heapsort\HeapSort.h" />
+    <ClInclude Include="code\algorithms\a-07-1-quicksort\QuickSort.h" />
+    <ClInclude Include="code\algorithms\a-08-2-countingsort\CountingSort.h" />
+    <ClInclude Include="code\algorithms\a-08-3-radixsort\RadixSort.h" />
+    <ClInclude Include="code\algorithms\a-09-2-randomizedselect\RandomizedSelect.h" />
+    <ClInclude Include="code\algorithms\a-10-2-doublylinkedlist\DoublyLinkedList.h" />
+    <ClInclude Include="code\algorithms\a-10-2-doublylinkedlist\DoublyLinkedListTest.h" />
+    <ClInclude Include="code\algorithms\a-11-3-hashing\Hashing.h" />
+    <ClInclude Include="code\algorithms\a-11-3-hashing\HashingTest.h" />
+    <ClInclude Include="code\algorithms\a-12-0-binarysearchtree\BinarySearchTree.h" />
+    <ClInclude Include="code\algorithms\a-12-0-binarysearchtree\BinarySearchTreeTest.h" />
+    <ClInclude Include="code\algorithms\a-13-0-redblacktree\RedBlackTree.h" />
+    <ClInclude Include="code\algorithms\a-13-0-redblacktree\RedBlackTreeTest.h" />
+    <ClInclude Include="code\common\AdvancedCollectionTest.h" />
+    <ClInclude Include="code\common\Algorithms.h" />
+    <ClInclude Include="code\common\CollectionTest.h" />
+    <ClInclude Include="code\common\ICollection.h" />
+    <ClInclude Include="code\common\Utils.h" />
+    <ClInclude Include="code\thinkings\t-02-4-inversion\Inversion.h" />
+    <ClInclude Include="code\thinkings\t-06-3-youngtableau\YoungTableau.h" />
+    <ClInclude Include="code\thinkings\t-13-3-avltree\AVLTree.h" />
+    <ClInclude Include="code\thinkings\t-13-3-avltree\AVLTreeTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
