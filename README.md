@@ -40,7 +40,7 @@ Charles Leiserson讲到了一个有趣的问题
 1. [散列表](Docs/Chapter/11.散列表.md)
 1. [二叉搜索树](Docs/Chapter/12.二叉搜索树.md)
 1. [红黑树](Docs/Chapter/13.红黑树.md)
-1. 数据结构的扩张
+1. [数据结构的扩张](Docs/Chapter/14.数据结构的扩张.md)
 ### 第四部分 高级设计和分析技术
 15. 动态规划
 1. 贪心算法
