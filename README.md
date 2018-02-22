@@ -35,7 +35,7 @@ Charles Leiserson讲到了一个有趣的问题
 1. [快速排序](Docs/Chapter/7.快速排序.md)
 1. [线性时间排序](Docs/Chapter/8.线性时间排序.md)
 1. [中位数和顺序统计量](Docs/Chapter/9.中位数和顺序统计量.md)
-### 第三部分 基础知识
+### 第三部分 数据结构
 10. [基本数据结构](Docs/Chapter/10.基本数据结构.md)
 1. [散列表](Docs/Chapter/11.散列表.md)
 1. [二叉搜索树](Docs/Chapter/12.二叉搜索树.md)
