@@ -43,9 +43,9 @@ class DivisionHashing : public Hashing
 class MultiplicationHashing : public Hashing
 {
  public:
-    // r : the bits of table size, table_size = x^r
+    // r : the bits of table size, table_size = 2^r
     // a : the multiplier in MultiplicationHashing
-    // w : the bits of key(default is the sizeof int)
+    // w : the bits of key(default is the sizeof int * 8)
     MultiplicationHashing(int r, int a, int w = 0) : Hashing(0x01 << r), r(r), a(a)
     {
         if (w == 0)
