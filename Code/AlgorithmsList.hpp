@@ -24,6 +24,7 @@ using namespace std;
 #include "RedBlackTreeTest.h"
 #include "AVLTreeTest.h"
 #include "RodCutting.h"
+#include "MatrixChainX.h"
 
 class AlgorithmsList
 {
@@ -47,6 +48,7 @@ class AlgorithmsList
         m_AddAlorithms(new RedBlackTreeTest());
         m_AddAlorithms(new AVLTreeTest());
         m_AddAlorithms(new RodCutting());
+        m_AddAlorithms(new MatrixChainX());
     }
 
     ~AlgorithmsList()

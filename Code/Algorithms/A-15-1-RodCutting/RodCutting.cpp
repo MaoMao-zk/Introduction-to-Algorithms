@@ -22,10 +22,15 @@ RodCutting::RodCutting()
 
 RodCutting::~RodCutting()
 {
-    if (m_price != NULL)
+    if (m_resultPrice != NULL)
     {
-        // delete []m_price;
-        m_price = NULL;
+        delete []m_resultPrice;
+        m_resultPrice = NULL;
+    }
+    if (m_resultCutting != NULL)
+    {
+        delete[]m_resultCutting;
+        m_resultCutting = NULL;
     }
 }
 
