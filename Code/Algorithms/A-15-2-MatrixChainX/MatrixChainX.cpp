@@ -48,7 +48,7 @@ void MatrixChainX::m_BuildInput()
     for (int i = 0; i < 6; i++)
     {
         char s[10] = {0};
-        snprintf(s, 10, "%d*%d", p[i], p[i+1]);
+        snprintf(s, sizeof(s), "%d*%d", p[i], p[i+1]);
         printf("%-10s", s);
     }
     printf("\n");
@@ -56,7 +56,6 @@ void MatrixChainX::m_BuildInput()
 
 void MatrixChainX::m_Execute()
 {
-    //rod_cutting(m_price, m_size, m_resultPrice, m_resultCutting);
     m_result = matrix_chain_x(m_matrixSize, m_count, m_resultMultipy, m_resultDevide);
 }
 
