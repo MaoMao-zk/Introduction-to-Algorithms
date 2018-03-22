@@ -13,6 +13,7 @@ using namespace std;
 #include "MaxSubArray.h"
 #include "MatrixMultiply.h"
 #include "HeapSort.h"
+#include "PriorityQueueTest.h"
 #include "YoungTableau.h"
 #include "QuickSort.h"
 #include "CountingSort.h"
@@ -38,6 +39,7 @@ class AlgorithmsList
         m_AddAlorithms(new MaxSubArray());
         m_AddAlorithms(new MatrixMultiply());
         m_AddAlorithms(new HeapSort());
+        m_AddAlorithms(new PriorityQueueTest());
         m_AddAlorithms(new YoungTableau());
         m_AddAlorithms(new QuickSort());
         m_AddAlorithms(new CountingSort());
