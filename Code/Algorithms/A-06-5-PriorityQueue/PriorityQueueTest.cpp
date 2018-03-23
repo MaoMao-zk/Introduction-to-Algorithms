@@ -11,9 +11,16 @@
 
 using namespace std;
 
+// insert `x` to priority queue
 extern void Insert(int* array, int& length, int x);
-extern int Maximum(int* array, int& length);
-extern int ExtractMax(int* array, int& length);
+
+// get the Maximum key in priority queue
+extern int  Maximum(int* array, int& length);
+
+// extract Maximum key from priority queue
+extern int  ExtractMax(int* array, int& length);
+
+// increase the key value of array[i] to `key`
 extern void IncreaseKey(int* array, int& length, int i, int key);
 
 extern void quick_sort(int* array, int start, int end);
@@ -46,7 +53,7 @@ void PriorityQueueTest::m_BuildInput()
 
     m_array = new int[m_size];
 
-    for(int i = 0; i < m_size; i++)
+    for (int i = 0; i < m_size; i++)
         m_array[i] = 0;
 }
 
@@ -103,7 +110,7 @@ void PriorityQueueTest::m_Execute()
 
 void PriorityQueueTest::Print(int* array, int& length)
 {
-    for(int i = 0;i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         cout << array[i] << " ";
     }
@@ -113,7 +120,7 @@ void PriorityQueueTest::Print(int* array, int& length)
 
 bool PriorityQueueTest::CheckHeap(int* array, int& length)
 {
-    for(int i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         int left = i*2 + 1;
         int right = i*2 + 2;
@@ -154,13 +161,13 @@ bool PriorityQueueTest::m_CheckOutput()
     timeval tv1, tv2;
     gettimeofday(&tv1, NULL);
 
-    for(int i = 0; i < TEST_SIZE; i++)
+    for (int i = 0; i < TEST_SIZE; i++)
     {
         Insert(array_queue, length, array_input[i]);
     }
-    for(int i = 0;i < TEST_SIZE; i++)
+    for (int i = 0; i < TEST_SIZE; i++)
     {
-        array_output[TEST_SIZE-i] = ExtractMax(array_queue, length);
+        array_output[TEST_SIZE-i-1] = ExtractMax(array_queue, length);
     }
 
     gettimeofday(&tv2, NULL);
@@ -172,12 +179,12 @@ bool PriorityQueueTest::m_CheckOutput()
 
     // Check
     bRet = CheckHeap(array_queue, length);
-    if(!bRet)
+    if (!bRet)
         return bRet;
 
-    for(int i = 0 ; i < TEST_SIZE; i++)
+    for (int i = 0 ; i < TEST_SIZE; i++)
     {
-        if(array_output[i] != array_sorted[i])
+        if (array_output[i] != array_sorted[i])
             return bRet = false;
     }
 
