@@ -35,7 +35,7 @@ void AVLTree::Delete(Element* elm)
     else
     {
         BinaryTreeNode* min = MinimumSubTree(pElm->right);
-        if (min == pElm->right || min->p == pElm->right)
+        if (min == pElm->right)
             adjustFromNode = min;
         else
             adjustFromNode = min->p;
