@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6038D4C0-1A8F-4751-AD37-9B8F9E153787}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Common;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Common;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="algorithms\a-02-1-insertionsort\InsertionSort.cpp" />
+    <ClCompile Include="algorithms\a-02-1-insertionsort\insertion_sort_realization.c" />
+    <ClCompile Include="algorithms\a-02-3-mergesort\MergeSort.cpp" />
+    <ClCompile Include="algorithms\a-02-3-mergesort\merge_sort_realization.c" />
+    <ClCompile Include="algorithms\a-04-1-maxsubarray\MaxSubArray.cpp" />
+    <ClCompile Include="algorithms\a-04-1-maxsubarray\max_subarray_realization.c" />
+    <ClCompile Include="algorithms\a-04-2-matrixmultiply\MatrixMultiply.cpp" />
+    <ClCompile Include="algorithms\a-04-2-matrixmultiply\matrix_multiply_realization.c" />
+    <ClCompile Include="algorithms\a-06-4-heapsort\HeapSort.cpp" />
+    <ClCompile Include="algorithms\a-06-4-heapsort\heap_sort_realization.c" />
+    <ClCompile Include="algorithms\a-06-5-priorityqueue\PriorityQueueTest.cpp" />
+    <ClCompile Include="algorithms\a-06-5-priorityqueue\priority_queue_realization.c" />
+    <ClCompile Include="algorithms\a-07-1-quicksort\QuickSort.cpp" />
+    <ClCompile Include="algorithms\a-07-1-quicksort\quick_sort_realization.c" />
+    <ClCompile Include="algorithms\a-07-1-quicksort\randomized_quick_sort_realization.c" />
+    <ClCompile Include="algorithms\a-08-2-countingsort\CountingSort.cpp" />
+    <ClCompile Include="algorithms\a-08-2-countingsort\counting_sort_realization.c" />
+    <ClCompile Include="algorithms\a-08-3-radixsort\RadixSort.cpp" />
+    <ClCompile Include="algorithms\a-08-3-radixsort\radix_sort_realization.c" />
+    <ClCompile Include="algorithms\a-09-2-randomizedselect\RandomizedSelect.cpp" />
+    <ClCompile Include="algorithms\a-09-2-randomizedselect\randomized_select_realization.c" />
+    <ClCompile Include="algorithms\a-10-2-doublylinkedlist\DoublyLinkedList.cpp" />
+    <ClCompile Include="algorithms\a-10-2-doublylinkedlist\DoublyLinkedListTest.cpp" />
+    <ClCompile Include="algorithms\a-11-3-hashing\Hashing.cpp" />
+    <ClCompile Include="algorithms\a-11-3-hashing\HashingTest.cpp" />
+    <ClCompile Include="algorithms\a-12-0-binarysearchtree\BinarySearchTree.cpp" />
+    <ClCompile Include="algorithms\a-12-0-binarysearchtree\BinarySearchTreeTest.cpp" />
+    <ClCompile Include="algorithms\a-13-0-redblacktree\RedBlackTree.cpp" />
+    <ClCompile Include="algorithms\a-13-0-redblacktree\RedBlackTreeTest.cpp" />
+    <ClCompile Include="algorithms\a-15-1-rodcutting\RodCutting.cpp" />
+    <ClCompile Include="algorithms\a-15-1-rodcutting\rod_cutting_realization.c" />
+    <ClCompile Include="algorithms\a-15-2-matrixchainx\MatrixChainX.cpp" />
+    <ClCompile Include="algorithms\a-15-2-matrixchainx\matrix_chain_x_realization.c" />
+    <ClCompile Include="algorithms\a-15-4-lcs\LCS.cpp" />
+    <ClCompile Include="algorithms\a-15-4-lcs\LCS_realization.c" />
+    <ClCompile Include="common\AdvancedCollectionTest.cpp" />
+    <ClCompile Include="common\Algorithms.cpp" />
+    <ClCompile Include="common\CollectionTest.cpp" />
+    <ClCompile Include="common\Utils.cpp" />
+    <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="thinkings\t-02-4-inversion\Inversion.cpp" />
+    <ClCompile Include="thinkings\t-02-4-inversion\inversion_realization.c" />
+    <ClCompile Include="thinkings\t-06-3-youngtableau\YoungTableau.cpp" />
+    <ClCompile Include="thinkings\t-06-3-youngtableau\young_tableau_realization.c" />
+    <ClCompile Include="thinkings\t-13-3-avltree\AVLTree.cpp" />
+    <ClCompile Include="thinkings\t-13-3-avltree\AVLTreeTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AlgorithmsList.hpp" />
+    <ClInclude Include="algorithms\a-02-1-insertionsort\InsertionSort.h" />
+    <ClInclude Include="algorithms\a-02-3-mergesort\MergeSort.h" />
+    <ClInclude Include="algorithms\a-04-1-maxsubarray\MaxSubArray.h" />
+    <ClInclude Include="algorithms\a-04-1-maxsubarray\max_subarray_realization.h" />
+    <ClInclude Include="algorithms\a-04-2-matrixmultiply\MatrixMultiply.h" />
+    <ClInclude Include="algorithms\a-06-4-heapsort\HeapSort.h" />
+    <ClInclude Include="algorithms\a-06-5-priorityqueue\PriorityQueueTest.h" />
+    <ClInclude Include="algorithms\a-07-1-quicksort\QuickSort.h" />
+    <ClInclude Include="algorithms\a-08-2-countingsort\CountingSort.h" />
+    <ClInclude Include="algorithms\a-08-3-radixsort\RadixSort.h" />
+    <ClInclude Include="algorithms\a-09-2-randomizedselect\RandomizedSelect.h" />
+    <ClInclude Include="algorithms\a-10-2-doublylinkedlist\DoublyLinkedList.h" />
+    <ClInclude Include="algorithms\a-10-2-doublylinkedlist\DoublyLinkedListTest.h" />
+    <ClInclude Include="algorithms\a-11-3-hashing\Hashing.h" />
+    <ClInclude Include="algorithms\a-11-3-hashing\HashingTest.h" />
+    <ClInclude Include="algorithms\a-12-0-binarysearchtree\BinarySearchTree.h" />
+    <ClInclude Include="algorithms\a-12-0-binarysearchtree\BinarySearchTreeTest.h" />
+    <ClInclude Include="algorithms\a-13-0-redblacktree\RedBlackTree.h" />
+    <ClInclude Include="algorithms\a-13-0-redblacktree\RedBlackTreeTest.h" />
+    <ClInclude Include="algorithms\a-15-1-rodcutting\RodCutting.h" />
+    <ClInclude Include="algorithms\a-15-2-matrixchainx\MatrixChainX.h" />
+    <ClInclude Include="algorithms\a-15-4-lcs\LCS.h" />
+    <ClInclude Include="common\AdvancedCollectionTest.h" />
+    <ClInclude Include="common\Algorithms.h" />
+    <ClInclude Include="common\CollectionTest.h" />
+    <ClInclude Include="common\ICollection.h" />
+    <ClInclude Include="common\Utils.h" />
+    <ClInclude Include="thinkings\t-02-4-inversion\Inversion.h" />
+    <ClInclude Include="thinkings\t-06-3-youngtableau\YoungTableau.h" />
+    <ClInclude Include="thinkings\t-13-3-avltree\AVLTree.h" />
+    <ClInclude Include="thinkings\t-13-3-avltree\AVLTreeTest.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
