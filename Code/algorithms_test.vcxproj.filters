@@ -21,64 +21,31 @@
     <ClCompile Include="algorithms\a-02-1-insertionsort\InsertionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\a-02-1-insertionsort\insertion_sort_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\a-02-3-mergesort\MergeSort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="algorithms\a-02-3-mergesort\merge_sort_realization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algorithms\a-04-1-maxsubarray\MaxSubArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\a-04-1-maxsubarray\max_subarray_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\a-04-2-matrixmultiply\MatrixMultiply.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="algorithms\a-04-2-matrixmultiply\matrix_multiply_realization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algorithms\a-06-4-heapsort\HeapSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\a-06-4-heapsort\heap_sort_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\a-06-5-priorityqueue\PriorityQueueTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="algorithms\a-06-5-priorityqueue\priority_queue_realization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algorithms\a-07-1-quicksort\QuickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\a-07-1-quicksort\quick_sort_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="algorithms\a-07-1-quicksort\randomized_quick_sort_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\a-08-2-countingsort\CountingSort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="algorithms\a-08-2-countingsort\counting_sort_realization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algorithms\a-08-3-radixsort\RadixSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\a-08-3-radixsort\radix_sort_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\a-09-2-randomizedselect\RandomizedSelect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="algorithms\a-09-2-randomizedselect\randomized_select_realization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algorithms\a-10-2-doublylinkedlist\DoublyLinkedList.cpp">
@@ -108,19 +75,10 @@
     <ClCompile Include="algorithms\a-15-1-rodcutting\RodCutting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\a-15-1-rodcutting\rod_cutting_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\a-15-2-matrixchainx\MatrixChainX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\a-15-2-matrixchainx\matrix_chain_x_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\a-15-4-lcs\LCS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="algorithms\a-15-4-lcs\LCS_realization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="common\AdvancedCollectionTest.cpp">
@@ -138,19 +96,67 @@
     <ClCompile Include="thinkings\t-02-4-inversion\Inversion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="thinkings\t-02-4-inversion\inversion_realization.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="thinkings\t-06-3-youngtableau\YoungTableau.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="thinkings\t-06-3-youngtableau\young_tableau_realization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="thinkings\t-13-3-avltree\AVLTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="thinkings\t-13-3-avltree\AVLTreeTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-02-1-insertionsort\insertion_sort_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-02-3-mergesort\merge_sort_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-04-1-maxsubarray\max_subarray_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-04-2-matrixmultiply\matrix_multiply_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-06-4-heapsort\heap_sort_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-06-5-priorityqueue\priority_queue_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-07-1-quicksort\quick_sort_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-07-1-quicksort\randomized_quick_sort_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-08-2-countingsort\counting_sort_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-08-3-radixsort\radix_sort_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-09-2-randomizedselect\randomized_select_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-15-1-rodcutting\rod_cutting_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-15-2-matrixchainx\matrix_chain_x_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms\a-15-4-lcs\LCS_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thinkings\t-02-4-inversion\inversion_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thinkings\t-06-3-youngtableau\young_tableau_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice_realization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -249,6 +255,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="thinkings\t-13-3-avltree\AVLTreeTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

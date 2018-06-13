@@ -27,6 +27,7 @@ using namespace std;
 #include "Algorithms/A-15-1-RodCutting/RodCutting.h"
 #include "Algorithms/A-15-2-MatrixChainX/MatrixChainX.h"
 #include "Algorithms/A-15-4-LCS/LCS.h"
+#include "Algorithms/A-16-1-ActivityChoice/ActivityChoice.h"
 
 class AlgorithmsList
 {
@@ -53,6 +54,7 @@ class AlgorithmsList
         m_AddAlorithms(new RodCutting());
         m_AddAlorithms(new MatrixChainX());
         m_AddAlorithms(new LCS());
+        m_AddAlorithms(new ActivityChoice());
     }
 
     ~AlgorithmsList()

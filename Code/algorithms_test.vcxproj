@@ -140,6 +140,8 @@
     <ClCompile Include="algorithms\a-15-2-matrixchainx\matrix_chain_x_realization.cpp" />
     <ClCompile Include="algorithms\a-15-4-lcs\LCS.cpp" />
     <ClCompile Include="algorithms\a-15-4-lcs\LCS_realization.cpp" />
+    <ClCompile Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice.cpp" />
+    <ClCompile Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice_realization.cpp" />
     <ClCompile Include="common\AdvancedCollectionTest.cpp" />
     <ClCompile Include="common\Algorithms.cpp" />
     <ClCompile Include="common\CollectionTest.cpp" />
@@ -176,6 +178,7 @@
     <ClInclude Include="algorithms\a-15-1-rodcutting\RodCutting.h" />
     <ClInclude Include="algorithms\a-15-2-matrixchainx\MatrixChainX.h" />
     <ClInclude Include="algorithms\a-15-4-lcs\LCS.h" />
+    <ClInclude Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice.h" />
     <ClInclude Include="common\AdvancedCollectionTest.h" />
     <ClInclude Include="common\Algorithms.h" />
     <ClInclude Include="common\CollectionTest.h" />
