@@ -9,6 +9,7 @@
 #include <sstream>
 #include <iomanip>
 #include <deque>
+#include <algorithm>
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>

@@ -30,5 +30,9 @@ int main(int argc, char* argv[])
 
     algorithmsList.RunAlgorithmsByIndex(index);
 
+#ifdef WIN32
+    system("pause");
+#endif
+
     return 0;
 }

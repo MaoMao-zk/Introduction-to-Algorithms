@@ -7,7 +7,6 @@ SRC_DIR=$(ROOT_DIR)
 SUB_DIR=$(filter-out .,$(shell find . -type d))
 
 ###compile flag###
-INC_DIR=$(patsubst %,-I%,$(SUB_DIR))
 COMMON_INC=$(shell ls Common/*.h 2>/dev/null)
 CFLAGS=-ICommon -Wall -std=c++11 -O2 -g
 
@@ -27,12 +26,12 @@ $(TARGET):$(OBJS) Entry.o
 	$(CC) -o $@ $^
 
 Entry.o:Entry.cpp AlgorithmsList.hpp $(OBJS)
-	$(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@	
+	$(CC) $(CFLAGS) -c $< -o $@	
 
 %.o:%.cpp %.h $(COMMON_INC)
 	$(CC) $(CFLAGS) -c $< -o $@	
 
-%.o:%.c %.h $(COMMON_INC)
+%.o:%.cpp $(COMMON_INC)
 	$(CC) $(CFLAGS) -c $< -o $@	
 
 clean:
