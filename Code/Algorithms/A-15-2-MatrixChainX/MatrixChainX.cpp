@@ -7,6 +7,10 @@
 #include <time.h>
 #include <iostream>
 
+#if _MSC_VER
+#define snprintf _snprintf
+#endif
+
 extern int** new_2v_array(int n);
 extern void delete_2v_array(int** array, int n);
 

@@ -159,6 +159,12 @@
     <ClCompile Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice_realization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Algorithms\A-16-3-HuffmanCode\HuffmanCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\A-16-3-HuffmanCode\HuffmanCode_realization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AlgorithmsList.hpp">
@@ -258,6 +264,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Algorithms\A-16-1-ActivityChoice\ActivityChoice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithms\A-16-3-HuffmanCode\HuffmanCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
