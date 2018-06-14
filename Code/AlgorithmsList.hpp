@@ -28,6 +28,7 @@ using namespace std;
 #include "Algorithms/A-15-2-MatrixChainX/MatrixChainX.h"
 #include "Algorithms/A-15-4-LCS/LCS.h"
 #include "Algorithms/A-16-1-ActivityChoice/ActivityChoice.h"
+#include "Algorithms/A-16-3-HuffmanCode/HuffmanCode.h"
 
 class AlgorithmsList
 {
@@ -55,6 +56,7 @@ class AlgorithmsList
         m_AddAlorithms(new MatrixChainX());
         m_AddAlorithms(new LCS());
         m_AddAlorithms(new ActivityChoice());
+        m_AddAlorithms(new HuffmanCode());
     }
 
     ~AlgorithmsList()
