@@ -24,7 +24,7 @@ Charles Leiserson讲到了一个有趣的问题
 英文版部分课后答案：[Intro_to_Algo_Selected_Solutions.pdf](https://mitpress.mit.edu/sites/default/files/titles/content/Intro_to_Algo_Selected_Solutions.pdf)
 
 ## 笔记汇总
-（注：有些文档中使用LaTax语法书写公式，若无法正常显示可以下载插件”GitHub with MathJax“，如果仍有无法正常显示的公式，可以到CSDN中查看：“https://blog.csdn.net/sinat_41170942/article/category/7477533”，谢谢）
+（注：有些文档中使用LaTax语法书写公式，若无法正常显示可以下载插件”GitHub with MathJax“，如果仍有无法正常显示的公式，可以到[CSDN中查看](https://blog.csdn.net/sinat_41170942/article/category/7477533)
 ### 第一部分 基础知识
 1. [算法在计算中的作用](Docs/Chapter/1.算法在计算中的作用.md)
 1. [算法基础](Docs/Chapter/2.算法基础.md)
